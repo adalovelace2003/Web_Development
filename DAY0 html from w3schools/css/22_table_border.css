@@ -1,0 +1,25 @@
+table,th,td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+/* 
+th {
+  background-color: powderblue;
+}
+
+td {
+  background-color: aquamarine;
+}
+
+#newcolor1{
+  background-color: yellow;
+}
+
+ 
+#newcolor2{
+  background-color: navajowhite;
+}
+
+#newcolor3 {
+  background-color: pink;
+}  */

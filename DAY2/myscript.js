@@ -1,0 +1,2 @@
+getElementById("Demo").innerHTML = "Hello";
+
