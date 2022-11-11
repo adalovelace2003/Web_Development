@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  /*float: left; */
+  display: inline-block;
+  padding: 100px; 
+  margin: 10px;
+  opacity: 1;
+}
+
+.div1 {
+    float: left;
+  background: red;
+}
+
+.div2 {
+    float: right;
+  background: yellow;
+}
+
+.div3 {
+    margin-left: 18em;
+  background: green;
+}
+
+.div12 {
+    float: left;
+    padding: 10px;
+    border: 3px solid #73AD21;
+  }
+  
+  .div22{
+    padding: 10px;
+    border: 3px solid red;
+  }
+  
+  .div32 {
+    float: left;
+    padding: 10px;  
+    border: 3px solid #73AD21;
+  }
+  
+  .div42 {
+    padding: 10px;
+    border: 3px solid red;
+    clear: left;
+  }
+</style>
+</head>
+<body>
+    
+    <h2>Float Next To Each Other</h2>
+    
+    <p>In this example, the three divs will float next to each other.</p>
+    
+    <div class="div1">Div 1</div>
+    <div class="div2">Div 2</div>
+    <div class="div3">Div 3</div>
+    
+    <br><br><br><br><br><br><br><br><br>
+
+<div class="div12">div1</div>
+<div class="div22">div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>
+<br><br>
+
+<h2>With clear</h2>
+<div class="div32">div3</div>
+<div class="div42">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+
+
+
+</body>
+
+</html>
+
+
