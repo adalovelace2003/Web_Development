@@ -1,2 +1,0 @@
-getElementById("Demo").innerHTML = "Hello";
-
