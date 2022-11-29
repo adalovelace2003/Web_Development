@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        border: 2px solid black;
+        margin: 10px;
+      }
+
+      #box1 {
+        background-color: red;
+        position: relative;
+        top: 34px;
+        z-index: 50;
+      }
+      #box2 {
+        background-color: blue;
+        /*visibility: hidden;*/ /*hides but shows the empty space */
+        /*display: none;*/
+        position: relative;
+        top: -10px;
+        z-index: 40;
+      }
+      #box3 {
+        background-color: purple;
+      }
+      #box4 {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1">Boxes</div>
+    <div class="box" id="box2">Boxes</div>
+    <div class="box" id="box3">Boxes</div>
+    <div class="box" id="box4">Boxes</div>
+  </body>
+</html>

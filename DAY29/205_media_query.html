@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        background-color: #bba;
+        font-size: 72px;
+        display: none;
+        text-align: center;
+      }
+      #div1 {
+        background-color: #bba;
+      }
+      #div2 {
+        background-color: red;
+      }
+      #div3 {
+        background-color: rgb(221, 255, 0);
+      }
+      #div4 {
+        background-color: rgb(85, 255, 0);
+      }
+
+      @media only screen and (max-width: 300px) {
+        #div1 {
+          display: block;
+        }
+      }
+
+      @media only screen and (min-width: 300px) and (max-width: 500px) {
+        #div2 {
+          display: block;
+        }
+      }
+
+      @media only screen and (min-width: 500px) and (max-width: 800px) {
+        #div3 {
+          display: block;
+        }
+      }
+      @media only screen and (min-width: 801px) {
+        #div4 {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div" id="div1">I am mobile</div>
+    <div class="div" id="div2">I am tablet</div>
+    <div class="div" id="div3">I am laptop</div>
+    <div class="div" id="div4">I am big monitor</div>
+  </body>
+</html>
+
+
+November 29,  || 22:30 || #Day29 #mrslovelace01
+Today , I cleared my concept about the flex box in more depth .
+Source : CodeWithHarry
+Github : https://github.com/adalovelace2003/Web_development/
+#codingchallenge #Day_29_of_clg_askmitra #itsnp
