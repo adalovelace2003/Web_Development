@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before and After psuedo selectors</title>
+    <style>
+      header::before {
+        content: "";
+        background-image: url("https://picsum.photos/1600/900/");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        opacity: 0.75;
+        z-index: -1;
+    }
+    
+    body {
+        font-family: "Crete Round", serif;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      .navigation {
+        display: flex;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+      }
+      li {
+        list-style-type: none;
+        padding: 10px 20px;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 50px;
+        align-items: center;
+        height: 250px;
+        /* border: 2px solid red; */
+        justify-content: center;
+      }
+      /*    section::before {
+            content: "This is a content";
+        } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navigation">
+          <li class="items" id="">Home</li>
+          <li class="items" id="">About</li>
+          <li class="items" id="">Services</li>
+          <li class="items" id="">Contact Us</li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h3 style="font-size: 4rem; text-align:center;" >Welcome to ITSNP</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+        iusto. Architecto itaque dicta nostrum sint quaerat nobis possimus
+        dolore autem?
+      </p>
+    </section>
+    <hr style="margin-top: 50px" />
+  </body>
+</html>
+
+
