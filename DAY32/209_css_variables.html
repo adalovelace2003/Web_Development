@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>varibales</title>
+    <style>
+        :root{
+            --box-color: green;
+            --primary-color:blue;
+            --secondary-color:yellow;
+            --maxw: 400px;
+            --bg-color:grey;
+        }
+      .box {
+        height: 200px;
+        width: 200px;
+        background-color: var(--box-color);
+        border: 2px solid var(--secondary-color);
+        box-shadow: 3px 3px 10px var(--box-color);
+        margin: 10px;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: var(--maxw);
+        background-color: var(--bg-color);
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+      <div class="box" id="box4"></div>
+    </div>
+  </body>
+</html>
