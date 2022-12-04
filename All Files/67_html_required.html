@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>The input required attribute</h1>
+
+    <p>
+      The required attribute specifies that an input field must be filled out
+      before submitting the form.
+    </p>
+
+    <form action="https://www.w3schools.com/action_page.php">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>
+      <strong>Note:</strong> The required attribute of the input tag is not
+      supported in Safari prior version 10.1.
+    </p>
+
+    <h1>The input step attribute</h1>
+
+    <p>
+      The step attribute specifies the legal number intervals for an input
+      element.
+    </p>
+
+    <form action="https://www.w3schools.com/action_page.php">
+      <label for="points">Points:</label>
+      <input type="number" id="points" name="points" step="4" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

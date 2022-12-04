@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      span {
+        padding: 10px;
+      }
+      .left {
+        background-color: pink;
+        float: left;
+      }
+      .center {
+        background-color: rgb(240, 142, 159);
+        float: left;
+        width: 40%;
+      }
+      .right {
+        background-color: pink;
+        float: left;
+      }
+      .both {
+        width: 30%;
+      }
+      .child {
+        height: auto;
+        min-height: 12em;
+      }
+      header,
+      footer {
+        width: 100%;
+        padding: 30px;
+        background-color: beige;
+        text-align: center;
+      }
+      @media (max-width: 600px) {
+        .child {
+            width: 100%;
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <h2 style="font-size: 2em; color: red">
+      THIS IS THE TEMPLATE MADE USING FLOAT
+    </h2>
+    <p style="font-size: 1em; color: brown">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+      officia ex, corrupti atque nisi laboriosam numquam fugiat asperiores
+      voluptatum placeat, maxime voluptates iure deleniti cupiditate sunt
+      adipisci provident. Possimus minus deleniti odit explicabo distinctio
+      laborum labore totam aliquid tempora accusamus consectetur reiciendis
+      deserunt eveniet laboriosam alias, facilis rem atque aut!
+    </p>
+
+    <p id="two" style="font-size: 3em">Responsive Design</p>
+
+    <header
+      style="
+        width: 100%;
+        padding: 30px;
+        background-color: beige;
+        text-align: center;
+      "
+    >
+      <h1>HEADER</h1>
+    </header>
+    <div
+      class="parent"
+      style="height: auto; border: 1px solid red;"
+    >
+      <span class="child both left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        blanditiis repellendus sint mollitia quae consequuntur nam ullam quas
+        enim, odio sed! Quas quasi praesentium harum unde in eos adipisci rem
+        eligendi totam illum saepe numquam magni, doloribus sit, illo
+        consectetur neque, blanditiis maxime earum maiores assumenda suscipit
+        officia! Quidem, non!
+      </span>
+      <span class="child center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        blanditiis repellendus sint mollitia quae consequuntur nam ullam quas
+        enim, odio sed! Quas quasi praesentium harum unde in eos adipisci rem
+        eligendi totam illum saepe numquam magni, doloribus sit, illo
+        consectetur neque, blanditiis maxime earum maiores assumenda suscipit
+        officia! Quidem, non!
+      </span>
+      <span class="child both right">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+        blanditiis repellendus sint mollitia quae consequuntur nam ullam quas
+        enim, odio sed! Quas quasi praesentium harum unde in eos adipisci rem
+        eligendi totam illum saepe numquam magni, doloribus sit, illo
+        consectetur neque, blanditiis maxime earum maiores assumenda suscipit
+        officia! Quidem, non!
+      </span>
+    </div>
+    <footer>
+      <h2>FOOTER</h2>
+    </footer>
+  </body>
+</html>
+

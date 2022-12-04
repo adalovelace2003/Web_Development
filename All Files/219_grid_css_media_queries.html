@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-areas:
+          "nav nav nav nav "
+          "section section section aside "
+          "footer footer footer footer";
+        grid-gap: 1rem;
+      }
+      nav {
+        grid-area: nav;
+      }
+      section {
+        grid-area: section;
+      }
+      aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+      }
+
+      .bdr {
+        padding: 20px;
+        border: 3px solid red;
+        background-color: black;
+        color: wheat;
+      }
+      footer {
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 300px) {
+        body {
+          background-color: rgb(62, 126, 111);
+        }
+        .container {
+          display: grid;
+          grid-template-areas:
+            "nav nav nav nav "
+            "section section section section "
+            "aside aside aside aside"
+            "footer footer footer footer";
+          grid-gap: 1rem;
+        }
+        span {
+          display: block;
+          padding: 0;
+        }
+      }
+
+      @media only screen and (min-width: 300px) and (max-width: 500px) {
+        body {
+          background-color: yellow;
+        }
+        .container {
+          display: grid;
+          grid-template-areas:
+            "nav nav nav nav "
+            "section section section section "
+            "aside aside aside aside"
+            "footer footer footer footer";
+          grid-gap: 1rem;
+        }
+        span {
+          display: block;
+          padding: 0;
+        }
+      }
+
+      @media only screen and (min-width: 500px) and (max-width: 800px) {
+        body {
+          background-color: green;
+        }
+      }
+      @media only screen and (min-width: 801px) {
+        body {
+          background-color: red;
+        }
+      }
+      span {
+        padding-right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="item bdr">
+        <span> Home </span>
+        <span> Services </span>
+        <span> About Us </span>
+        <span>Contact</span>
+      </nav>
+
+      <section class="item bdr">
+        <h2>Learn CSS here</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          reprehenderit quasi sint voluptates facere iure dolor aspernatur
+          eligendi atque cum nulla esse provident cumque quisquam itaque dolore
+          dignissimos beatae deleniti magnam perspiciatis unde aliquid, magni
+          inventore aliquam. Unde aspernatur vitae porro adipisci doloremque
+          obcaecati minus laudantium inventore quisquam libero nostrum vel
+          necessitatibus cum, harum totam error eaque assumenda non? Nisi error
+          ratione reprehenderit delectus ex, magnam praesentium suscipit ut
+          eligendi! Asperiores architecto totam dolorem. Adipisci commodi hic,
+          rerum inventore expedita magnam similique nobis. Nulla facilis cumque
+          atque quisquam dolor in commodi totam. Quidem natus esse sequi dolorem
+          veniam, autem, minima temporibus perferendis, suscipit in dolore
+          cupiditate accusantium obcaecati ipsam fuga illo blanditiis maiores.
+          Similique omnis voluptates aliquid corporis officia labore error hic
+          eos perspiciatis consequatur ullam facilis et, veritatis dolor quae
+          consequuntur blanditiis nisi reiciendis numquam! Mollitia quas cum
+          adipisci dignissimos, suscipit laudantium illo magni sed ipsum nulla,
+          neque excepturi placeat sunt quisquam odio alias modi temporibus enim,
+          possimus error eius incidunt maxime! Vero a natus velit tempore
+          accusantium corporis! Veritatis ab eligendi quas blanditiis corrupti
+          libero minima laboriosam, possimus a repudiandae, ut sed, officiis
+          facere! Soluta saepe tenetur magnam voluptatum reprehenderit
+          voluptates a, ex iure cumque labore possimus at eius dignissimos
+          dolorem libero sed. Laboriosam obcaecati ab, cupiditate quo animi ex
+          officiis soluta voluptate illo temporibus, perferendis ut impedit
+          maxime doloremque maiores aperiam fuga magnam repellat culpa
+          repellendus, odit velit. Aperiam accusamus explicabo iusto fuga quia
+          sit accusantium laudantium delectus, autem nemo excepturi nisi ea
+          saepe aliquam vitae hic veniam sed praesentium porro facere fugit
+          alias quidem, eos earum? Magnam et vel qui accusantium doloremque
+          delectus at perspiciatis facilis placeat dignissimos dolorem, a nam
+          nisi eum odio sequi inventore similique! Reprehenderit atque impedit
+          ducimus, saepe, quia, placeat nihil repudiandae sint explicabo earum
+          magni eos deleniti molestias quisquam nulla suscipit?
+        </p>
+      </section>
+      <aside class="item bdr">
+        <h1>More about us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+          quaerat laborum culpa architecto repellendus quo dolorum neque minus
+          velit totam minima doloribus, ullam in odio provident expedita
+          adipisci qui labore optio animi voluptatum! Illo dolor quae aspernatur
+          sed! Quod optio eius nesciunt exercitationem amet, quasi laboriosam
+          cum odit id sequi! Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Error earum sit ipsum sapiente a animi iusto eos mollitia
+          molestiae, autem itaque nulla nisi aspernatur facilis soluta
+          consectetur quae consequuntur veniam. Quo, quae dolorem, iusto
+          accusantium distinctio vero architecto sequi officiis quod repudiandae
+          totam ratione impedit optio voluptatum, minus doloribus vitae.
+        </p>
+      </aside>
+      <footer class="bdr">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, tempora?
+      </footer>
+    </div>
+  </body>
+</html>

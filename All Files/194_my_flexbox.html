@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 10;
+        padding: 10;
+        background-color: rgb(255, 255, 255);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      header {
+        padding: 30px;
+        background-color: rgb(204, 204, 204);
+        font-size: 3.5em;
+        text-align: center;
+        font-weight: bold;
+      }
+      .row {
+        display: flex;
+      }
+      .child {
+        flex:1;
+        height: 150px;
+        padding: 10px;
+      }
+      footer {
+        background-color: rgb(201, 201, 201);
+        text-align: center;
+        padding: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.5em;
+      }
+      @media (max-width : 700px)
+      {
+        .row {
+            flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">CSS Template using Flexbox</h1>
+    <br />
+    <p class="one">
+      In this example, we have created a header, three equal columns and a
+      footer. On smaller screens, the columns will stack on top of each other.
+      In this example, we have created a header, three equal columns and a
+      footer. On smaller screens, the columns will stack on top of each other.
+    </p>
+    <br />
+    <p>Resize the browser window to see the responsive effect.</p>
+    <br />
+    <p>
+      <strong>Note: </strong> Flexbox is not supported in Internet Explorer 10
+      eand earlier versions.
+    </p>
+    <br />
+    <header>
+      Header
+    </header>
+    <div class="row">
+        <div class="child child1" style="background-color: #aaa;">Column</div>
+        <div class="child child2" style="background-color: #bbb;">Column</div>
+        <div class="child child3" style="background-color: rgb(105, 100, 100);">Column</div>
+    </div>
+    <footer>
+        Footer
+    </footer>
+  </body>
+</html>

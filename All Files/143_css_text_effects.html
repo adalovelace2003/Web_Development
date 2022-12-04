@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p.test {
+        width: 11em;
+        border: 1px solid #000000;
+        word-wrap: break-word;
+      }
+      p.test1 {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: clip;
+        padding: 10px;
+      }
+
+      p.test2 {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 10px;
+      }
+      p.test3 {
+        width: 140px; 
+        border: 1px solid #000000;
+        word-break: keep-all;
+      }
+      
+      p.test4 {
+        width: 140px; 
+        border: 1px solid #000000;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The word-wrap Property</h1>
+
+    <p class="test">
+      This paragraph contains a very long word:
+      thisisaveryveryveryveryveryverylongword. The long word will break and wrap
+      to the next line.
+    </p>
+
+    <h1>The word-break Property</h1>
+
+    <p class="test3">
+      This paragraph contains some text. This line will-break-at-hyphens.
+    </p>
+
+    <p class="test4">
+      This paragraph contains some text. The lines will break at any character.
+    </p>
+
+    <h1>The text-overflow Property</h1>
+    <p>
+      The following two paragraphs contains a long text that will not fit in the
+      box.
+    </p>
+
+    <h2>text-overflow: clip:</h2>
+    <p class="test1">This is some long text that will not fit in the box</p>
+
+    <h2>text-overflow: ellipsis:</h2>
+    <p class="test2">This is some long text that will not fit in the box</p>
+  </body>
+
+  <!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss3_text-overflow by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jun 2022 19:58:08 GMT -->
+</html>
