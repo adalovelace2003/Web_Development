@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-gap: 1rem;
+        /* grid-template-columns: 120px 120px 102px; */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+        justify-content: center;
+      }
+      .box {
+        background-color: red;
+        border: 3px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">b0x-1</div>
+      <div class="box">b0x-2</div>
+      <div class="box">b0x-3</div>
+      <div class="box">b0x-4</div>
+      <div class="box">b0x-5</div>
+      <div class="box">b0x-6</div>
+      <div class="box">b0x-7</div>
+      <div class="box">b0x-8</div>
+      <div class="box">b0x-9</div>
+      <div class="box">b0x-10</div>
+      <div class="box">b0x-11</div>
+      <div class="box">b0x-12</div>
+      <div class="box">b0x-13</div>
+      <div class="box">b0x-14</div>
+      <div class="box">b0x-15</div>
+      <div class="box">b0x-16</div>
+      <div class="box">b0x-17</div>
+      <div class="box">b0x-18</div>
+      <div class="box">b0x-19</div>
+      <div class="box">b0x-20</div>
+    </div>
+  </body>
+</html>
