@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --left-gap-betn-items: 1.55rem;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-weight: 1000;
+        letter-spacing: 0.05rem;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(207, 205, 203);
+      }
+      .menubar {
+        padding-left: 1.5rem;
+        display: flex;
+        width: 20%;
+        height: 100vh;
+        background-color: rgb(80, 80, 184);
+        position: fixed;
+        flex-direction: column;
+      }
+      .upper {
+        margin-top: 3rem;
+        display: flex;
+        gap: var(--left-gap-betn-items);
+        flex-direction: column;
+      }
+
+      .dashboard {
+        margin-top: 1.5rem;
+      }
+
+      .lower {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: var(--left-gap-betn-items);
+      }
+
+      .upper-right {
+        background-color: rgb(255, 255, 255);
+        width: 80%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        height: 17vh;
+        padding: 1rem;
+        padding-left: 2rem;
+        box-shadow: 5px 5px 5px black;
+      }
+      #noti-btn {
+        padding-left: 10rem;
+      }
+      #pp {
+        padding-left: 4rem;
+      }
+      #name-up-right {
+        padding-left: 4rem;
+      }
+
+      .under-noti {
+        margin-top: 2rem;
+      }
+      #hi-there {
+        font-size: 0.8rem;
+      }
+      .second-row {
+        padding-left: 3rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      .btn-up-3 {
+        font-size: 1rem;
+        background-color: rgb(80, 80, 184);
+      }
+      .btn-up-3-all {
+        display: inline-flex;
+        gap: 4rem;
+        margin-left: 4rem;
+      }
+      .btn-up-3 {
+        padding: 0.3rem 0.7rem;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+
+      .center-left-main {
+        background-color: rgb(207, 205, 203);
+        float: right;
+        position: absolute;
+        margin-top: 17vh;
+        height: 83vh;
+        padding: 10px;
+        right: 23%;
+        width: 57%;
+      }
+
+      .center {
+        display: flex;
+        width: 80%;
+      }
+      .center-left {
+        padding: 5px;
+        flex: 2.3;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        /* border: 3px solid purple; */
+margin: 2rem;
+        
+      }
+
+      div h1 {
+        font-size: 1rem;
+      }
+
+      .cards {
+        width: 47%;
+        height: 20vh;
+        margin-right: 10px;
+        border-left: 10px solid rgb(255, 145, 0);
+        padding: 10px;
+        box-shadow: 3px 3px 10px 1px black;
+        border-radius: 10px;
+        margin: 10px;
+        background-color: white;
+      }
+      .cards h1, .cards p {
+        color: black;
+      }
+
+
+      .announcements{
+        box-shadow: 3px 3px 5px ;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 10px;
+        width: 80%;
+
+        
+      }
+
+
+      .ann-cls{
+        padding: 10px;
+      }
+
+      .center-right-main {
+        background-color: rgb(207, 205, 203);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        float: right;
+        position: absolute;
+        margin-top: 17vh;
+        padding: 10px;
+        right: 0%;
+        width: 23%;
+        gap: 3rem;
+      }
+
+      footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Left menu bar  -->
+    <nav class="menubar">
+      <div class="dashboard">
+        <!-- <img src="image.png" alt="" id="dashlogo" /> -->&nbsp; X &nbsp;
+        Dashboard
+      </div>
+      <div class="upper">
+        <div id="home ">Home</div>
+        <div id="profile ">Profile</div>
+        <div id="messages ">Messages</div>
+        <div id="messages  ">History</div>
+        <div id="tasks ">Tasks</div>
+        <div id="communities ">Communities</div>
+      </div>
+      <div class="lower">
+        <div id="settings">Settings</div>
+        <div id="support">Support</div>
+        <div id="privacy">Privacy</div>
+      </div>
+    </nav>
+    <!-- Left menu bar  -->
+
+    <!-- Top Right Horizontal Bar -->
+    <div class="upper-right">
+      <!-- Using this for the upper  -->
+      <div class="srch-noti-name-pp">
+        <span class="srch-btn">
+          <img src="" alt="X" /><!-- srch image -->
+        </span>
+        <input type="text" />
+        <span id="noti-btn">X</span
+        ><!-- Notification button -->
+        <span id="pp">PP</span
+        ><!-- Profile picture image -->
+        <span id="name-up-right">Ada Lovelace</span>
+      </div>
+
+      <div class="under-noti">
+        <span id="big-img"> IMG</span
+        ><!-- Image -->
+        <span id="hi-there">Hi there,</span>
+        <div class="second-row">
+          Ada Lovelace @mrsada
+          <div class="btn-up-3-all">
+            <div class="btn-up-3">New</div>
+            <div class="btn-up-3">Upload</div>
+            <div class="btn-up-3">Share</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Right Horizontal Bar -->
+    <div class="center-left-main">
+      <div class="center-left">
+        <div class="cards" id="card1">
+          <h1>This is heading 123</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Perspiciatis, sed.
+          </p>
+        </div>
+        <div class="cards" id="card2">
+          <h1>This is heading 123</h1>
+          <p>lorem30</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Perspiciatis, sed.
+          </p>
+        </div>
+        <div class="cards" id="card3">
+          <h1>This is heading 123</h1>
+          <p>lorem30</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Perspiciatis, sed.
+          </p>
+        </div>
+        <div class="cards" id="card4">
+          <h1>This is heading 123</h1>
+          <p>lorem30</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Perspiciatis, sed.
+          </p>
+        </div>
+        <div class="cards" id="card5">
+          <h1>This is heading 123</h1>
+          <p>lorem30</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Perspiciatis, sed.
+          </p>
+        </div>
+        <div class="cards" id="card6">
+          <h1>This is heading 123</h1>
+          <p>lorem30</p>
+          <p>
+
+
+            Lorem ipsum dolor sit, amet consectetur adipisicing.
+          </p>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+    
+    <div class="center-right-main">
+        
+      <div class="announcements">
+        <div class="ann-cls">
+          <p>
+            <h3>heading</h3>
+
+
+            Lorem ipsum dolor sit, amet 
+          </p>
+          <hr>
+        </div>
+        <div class="ann-cls">
+          <p>
+            <h3>heading</h3>
+
+
+
+            Lorem ipsum dolor sit, amet 
+          </p>
+          <hr>
+        </div>
+        <div class="ann-cls">
+          <h3>heading</h3>
+          <p>
+            Lorem ipsum dolor, sit amet 
+          </p>
+          <hr>
+        </div>
+      </div>
+        
+      <div class="announcements">
+        <div class="ann-cls">
+          <p>
+            <h3>heading</h3>
+
+
+            Lorem ipsum dolor sit, amet 
+          </p>
+          <hr>
+        </div>
+        <div class="ann-cls">
+          <p>
+            <h3>heading</h3>
+
+
+
+            Lorem ipsum dolor sit, amet 
+          </p>
+          <hr>
+        </div>
+        <div class="ann-cls">
+          <h3>heading</h3>
+          <p>
+            Lorem ipsum dolor, sit amet 
+          </p>
+          <hr>
+        </div>
+      </div>
+
+     
+    </div>
+
+    <footer>
+      Copyright © Ada Dashboard 2022
+    </footer>
+  </body>
+</html>
