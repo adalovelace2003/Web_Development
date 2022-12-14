@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Navigation Menu</title>
+    <link rel="stylesheet" href="style2.css" />
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      nav {
+        height: 80px;
+        background: black;
+        display: flex;
+        align-items: center;
+        /* align-content: center; */
+        justify-content: space-between;
+        padding: 0px 50px 0px 80px;
+      }
+      nav .logo {
+        font-size: 2.5rem;
+        color: white;
+        font-weight: 600px;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+      nav ul li {
+        margin: 0 0.5rem;
+      }
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+        transition: 0.3s ease;
+      }
+      nav ul li a:hover,
+      .active {
+        background-color: white;
+        color: black;
+      }
+
+      nav .menu-btn {
+        display: none;
+        color: white;
+        font-size: 3rem;
+        cursor: pointer;
+      }
+      /* CSS for responsive mobile things */
+
+      #click {
+        display: none;
+      }
+
+      #click:checked ~ ul {
+        left: 0%;
+        transition: all 0.3s ease;
+        opacity: 0.95;
+      }
+
+      #click:checked ~ .menu-btn {
+        background: #000;
+      }
+
+      @media (max-width: 950px) {
+        nav ul {
+          position: fixed;
+          top: 80px;
+          left: -100%;
+          background: #000;
+          height: 100vh;
+          width: 100%;
+          /* display: block; */
+          flex-direction: column;
+          align-items: center;
+          gap: 80px;
+        }
+        nav ul li a:hover,
+        .active {
+          background-color: black;
+          color: cyan;
+        }
+        nav .menu-btn {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Brand</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn"> <span id="XX">=</span> </label>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <section>
+      <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, culpa.
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+        accusantium, reprehenderit porro eveniet enim illo quisquam adipisci. In
+        quas perferendis beatae laboriosam? Explicabo molestiae delectus maxime
+        saepe fugit inventore voluptatibus aut, nihil iure, suscipit aperiam,
+        assumenda molestias quibusdam veniam optio fugiat quae? Neque laborum
+        praesentium, commodi molestiae dolor quod modi doloremque eum cum
+        maiores nam provident tempora doloribus ea accusantium repellat fugit
+        omnis iure at unde. Deserunt reprehenderit molestiae, ad eos illum illo
+        consequuntur aliquam rerum ullam qui, doloremque eveniet? Illum vero eum
+        ea, itaque nostrum soluta, tempora ad libero aperiam blanditiis, minus
+        fuga repudiandae corrupti omnis alias consequuntur eius sunt officia
+        aspernatur odit nam deleniti dolore voluptates nulla! Nulla facilis est
+        eum, atque velit ut voluptate ad ducimus, iusto molestias labore vitae
+        soluta, rerum architecto cum mollitia beatae. Amet unde voluptate harum
+        quidem magni beatae, reprehenderit culpa modi odit blanditiis enim omnis
+        praesentium totam aut maiores repudiandae ad asperiores rerum, iusto
+        itaque et, ab fugiat dicta. Officia eveniet quo, delectus earum cumque
+        inventore dolores dicta ipsam assumenda. Nobis doloremque temporibus
+        tenetur dolorem? Pariatur quia deserunt blanditiis quo, ex dolorum id
+        aliquam voluptatum, earum praesentium est eligendi, dolore similique
+        quos vitae placeat nihil corporis odio molestiae deleniti. Voluptatem ad
+        corrupti, similique officia voluptate, molestias vitae suscipit
+        perspiciatis corporis voluptates tempore praesentium natus ratione aut,
+        numquam impedit. Obcaecati qui quo quae delectus minima quod alias
+        cumque distinctio ipsum vero similique impedit voluptatem, eos,
+        molestiae, minus atque quia veniam amet consectetur saepe esse
+        exercitationem tempora numquam. Iure ducimus rem officiis ea assumenda
+        facilis doloremque ad possimus consequuntur dolorum, voluptate quidem
+        facere inventore aliquam natus earum, animi pariatur quam nulla.
+        Molestias, dicta laborum ullam quo architecto odio dolor nemo amet? Illo
+        autem est earum? Quia beatae totam quas vel reprehenderit nobis, quidem
+        eaque sed suscipit delectus cum, eligendi consequuntur? Officiis, et
+        consequuntur expedita modi deleniti animi velit doloremque deserunt
+        eveniet recusandae sunt aliquam impedit obcaecati dolorum ratione
+        ducimus placeat porro vero provident? Nostrum dignissimos, consequuntur
+        magnam totam ipsum amet eaque autem quas accusantium illum accusamus
+        fugiat aperiam sequi vero? Cumque totam magnam perspiciatis? Rerum, iste
+        vero! Nihil perferendis enim excepturi dolores voluptatum tempora
+        quidem, dolore dolorum minima dicta! Deleniti consectetur aliquid eaque
+        asperiores explicabo reprehenderit beatae ipsa itaque rerum dolore
+        possimus esse facere, voluptas odit vitae optio. Sit ab molestias soluta
+        tempora voluptatem veniam porro est non esse? Expedita ipsa illo a
+        excepturi animi beatae quam fuga voluptatum inventore maxime consectetur
+        officiis est obcaecati, adipisci cum dolore nisi fugiat. Corrupti
+        inventore iusto hic reprehenderit numquam. Vitae tenetur, possimus natus
+        dolor, quis inventore corporis saepe illum officiis officia quod
+        sapiente alias iure nesciunt ipsam distinctio atque? Reiciendis
+        perferendis harum quae quia voluptatibus itaque a, ex repellendus,
+        blanditiis nobis impedit quasi, quod illo quisquam adipisci excepturi
+        qui dolorem voluptates dolore eius nostrum rem deleniti corrupti! Error
+        veritatis laudantium eos, rerum debitis illo eveniet, ut nemo itaque
+        deleniti dolores excepturi delectus maxime culpa asperiores ad sed
+        assumenda natus quidem deserunt voluptate? Culpa delectus optio sequi
+        quia, consequatur esse repudiandae amet dolor pariatur, placeat modi ut
+        velit.
+      </p>
+    </section>
+  </body>
+</html>
