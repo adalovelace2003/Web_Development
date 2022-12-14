@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-    <input type="checkbox" id="click_tmp" />
-    <label for="click_tmp" class="menu-btn">
-        <img
-        class="icon"
-        src="https://cdn-icons-png.flaticon.com/512/3524/3524878.png"
-        id="dashboard-icon2"
-      />
-    </label>
+   
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,6 +71,7 @@
         padding: var(--padding-up-text-navbar) var(--padding-right-text-navbar)
           var(--padding-down-text-navbar) var(--padding-left-text-navbar);
         overflow: hidden;
+        transition: 0.5s ease;
       }
 
       #dashboard {
@@ -165,8 +158,8 @@
         height: 2rem;
         background-color: rgb(212, 209, 209);
         border: none;
-        width: 40rem;
-        /* transition: 1s ease; */
+        width: 35rem;
+        transition: 1s ease; 
         padding: 1rem;
         color: grey;
       }
@@ -311,6 +304,12 @@
         border-left: 11px solid orange;
         min-height: 11rem;
         max-width: 45%;
+        transform: 1s ease;
+        transform: 1s ease;
+      }
+
+      .cards:hover {
+        transform: scale(1.02);
       }
 
       .center-right-bar {
@@ -439,10 +438,8 @@
         }
 
         #click {
-          display: block;
-            visibility: visible;
+          display: none;
         }
-
       }
 
       /* styling the dashboard icon  */
@@ -453,16 +450,17 @@
       #click_tmp {
         display: none;
       }
-      #click_tmp:checked ~ .navbar{
+      /*       #click_tmp:checked~.navbar{
         width: 10%;
         background-color: pink;
       }
-      #click_tmp:checked ~ .body{
+
+       #click_tmp:checked ~ .body{
         background-color: rgb(58, 205, 32);
+      } */
+      #click_tmp:checked ~ #dashboard {
+        font-size: 5rem;
       }
-
-
-
 
       @media only screen and (max-width: 870px) {
         .Cards-group {
@@ -480,7 +478,7 @@
         }
 
         #click {
-          display: block;
+          display: none;
         }
 
         .center-and-right {
@@ -518,7 +516,7 @@
         }
 
         #click {
-          display: block;
+          display: none;
         }
 
         .center-and-right {
@@ -564,7 +562,7 @@
         }
 
         #click {
-          display: block;
+          display: none;
         }
 
         .center-and-right {
@@ -630,6 +628,40 @@
           order: 4;
         }
       }
+      /* extra CSS */
+      .nav-text:hover {
+        color: purple;
+      }
+
+      #pp11 {
+        transition: 1s ease;
+      }
+
+      #pp11:hover {
+        transform: scale(1.3);
+      }
+      .icon {
+        cursor: pointer;
+      }
+      .icon:hover {
+        transition: 1s ease;
+        filter: saturate();
+      }
+
+      #search-bar:hover{
+        transform: scale(1.1);
+      }
+      .center-right-upper, .center-right-lower{
+        transform: 1s ease;
+      }
+      .center-right-upper:hover, .center-right-lower:hover{
+       scale: 1.05;
+
+        }
+      .button:hover{
+        opacity: 0.7;
+      }
+
     </style>
   </head>
 
