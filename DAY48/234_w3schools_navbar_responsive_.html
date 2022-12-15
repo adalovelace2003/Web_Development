@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="icon" type="image/x-icon" href="https://www.w3schools.com/favicon.ico">
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.w3schools.com/favicon.ico"
+    />
     <title>w3schools</title>
     <style>
       * {
@@ -46,9 +53,9 @@
         font-size: 0.7rem;
         font-weight: 500;
       }
-      .txt:hover,.txt2:hover{
+      .txt:hover,
+      .txt2:hover {
         opacity: 0.5;
-
       }
       .right {
         float: right;
@@ -64,10 +71,10 @@
         border-radius: 1rem;
         padding: 0.3rem;
       }
-      .btn:hover{
+      .btn:hover {
         opacity: 0.8;
       }
-      
+
       #btn1 {
         background-color: #282a35;
         color: white;
@@ -83,65 +90,134 @@
         color: white;
       }
 
-
-      .main{
+      .main {
         background-color: #262832;
         height: 100rem;
         width: 100%;
       }
-      i{
+      i {
         font-size: 0.45rem;
       }
-      img:hover{
+      img:hover {
         opacity: 0.65;
       }
-      
-      @media only screen and (max-width:800px){
 
+      .li-menu {
+        display: none;
+        cursor: pointer;
+      }
+    
+
+      @media only screen and (max-width: 800px) {
         #li-upgrade {
           display: none;
         }
+
       }
-      @media only screen and (max-width:740px){
+      /* never shows the home btn until 480 px */
+      @media only screen and (max-width: 10000px) {
+        .dropbtn{
+          display: none;
+        }
+
+      }
+      @media only screen and (max-width: 740px) {
         #li-getcert {
           display: none;
         }
       }
-      @media only screen and (max-width:630px){
-
-
+      @media only screen and (max-width: 630px) {
         #li-freeweb {
           display: none;
         }
-
       }
-      @media only screen and (max-width:630px){
-
-
+      @media only screen and (max-width: 630px) {
         #li-login {
           display: none;
         }
-
       }
-      @media only screen and (max-width:480px){
-          .li-left{
-            display: none;
-          }
 
+      @media only screen and (max-width: 480px) {
 
+        .dropbtn {
+          display: block;
+        }
+        .li-left {
+          display: none;
+        }
+
+        .li-menu {
+          display: inline-block;
+          padding: 0.2rem;
+        }
+
+        .hello {
+          display: none;
+        }
+
+        .menu1:hover {
+          background-color: #00a143;
+          opacity: 1;
+          height: auto;
+        }
+
+        .li-menu:hover .hello {
+          display: block;
+        }
+        .dropdown {
+          display: block;
+        }
       }
+      /* end of MQ 480 */
 
       /* showing the things up when hoevering on the menu icon */
 
-      #menu-txt {
+      .li-menu {
         text-align: center;
         line-height: 0.6rem;
+        cursor: pointer;
       }
 
-      .li-menu:hover {
+      /* dropdown */
+      .dropdown {
+        position: relative;
+        display: block;
+      }
+
+      .dropbtn {
         background-color: #00a143;
-        opacity: 1;
-        height: auto;
+        color: white;
+        padding: 0.3rem;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      .dropbtn:hover {
+        background-color: #00a1436c;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
       }
     </style>
   </head>
@@ -156,23 +232,59 @@
               alt="logo"
               id="w3-logo"
           /></a>
-        </li>        
-       
-        <!-- Adding the menu bar for the responsive part  -->
-        <li class="li-menu txt left"> <p id="menu-txt"> Menu <br> <i>&#9660;</i></p></li>
+        </li>
+
         <!-- Adding the menu bar for the responsive part  -->
 
-        <li class="li-left"><a href="#" class="left txt" id="tut">Tutorials  <i>&#9660;</i>
-             </a></li>
-        <li class="li-left"><a href="#" class="left txt" id="ref">References <i>&#9660;</i> </a></li>
-        <li class="li-left"><a href="#" class="left txt" id="exr">Exercises <i>&#9660;</i> </a></li>
-        <li class="li-left"><a href="#" class="left txt" id="videos">Videos</a></li>
+        <!--        
+        <li class="li-menu menu1 txt left">
+          <p id="li-menu">
+            Menu <br />
+            <i>&#9660;</i>
+          </p>
+        </li> -->
+
+        <div class="dropdown" style="float: left">
+          <button class="dropbtn">Menu <i>&#9660;</i>  </button>
+          <div class="dropdown-content" style="left: 0">
+            <a href="#" class="left txt" id="tut">Tutorials <i>&#9660;</i> </a>
+
+            <a href="#" class="left txt" id="ref">References <i>&#9660;</i> </a>
+
+            <a href="#" class="left txt" id="exr">Exercises <i>&#9660;</i> </a>
+
+            <a href="#" class="left txt" id="videos">Videos</a>
+          </div>
+        </div>
+
+        <!-- Adding the menu bar for the responsive part  -->
+
+        <li class="li-left">
+          <a href="#" class="left txt" id="tut">Tutorials <i>&#9660;</i> </a>
+        </li>
+        <li class="li-left">
+          <a href="#" class="left txt" id="ref">References <i>&#9660;</i> </a>
+        </li>
+        <li class="li-left">
+          <a href="#" class="left txt" id="exr">Exercises <i>&#9660;</i> </a>
+        </li>
+        <li class="li-left">
+          <a href="#" class="left txt" id="videos">Videos</a>
+        </li>
         <!-- Right Part -->
 
-        <li id="li-login" ><a href="#" id="btn4" class="right txt2 btn">Log in</a></li>
-        <li id="li-freeweb" ><a href="#" id="btn3" class="right txt2 btn">Free Website</a></li>
-        <li id="li-getcert" ><a href="#" id="btn2" class="right txt2 btn">Get Certified</a></li>
-        <li id="li-upgrade" ><a href="#" id="btn1" class="right txt2 btn">Upgrade</a></li>
+        <li id="li-login">
+          <a href="#" id="btn4" class="right txt2 btn">Log in</a>
+        </li>
+        <li id="li-freeweb">
+          <a href="#" id="btn3" class="right txt2 btn">Free Website</a>
+        </li>
+        <li id="li-getcert">
+          <a href="#" id="btn2" class="right txt2 btn">Get Certified</a>
+        </li>
+        <li id="li-upgrade">
+          <a href="#" id="btn1" class="right txt2 btn">Upgrade</a>
+        </li>
 
         <li>
           <a href="#" class="right">
@@ -208,12 +320,7 @@
         </li>
       </ul>
     </nav>
-    
-</a>
-    <div class="main">
 
-    </div>
+    <div class="main"></div>
   </body>
 </html>
-
-
