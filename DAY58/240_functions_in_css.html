@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .el {
+            background: url(/images/image.jpg);
+          }
+        /* <div data-example="foo"> */
+div {
+    content: attr(data-example);
+  }
+
+  .el {
+  width: calc(100vw - 80px);
+}
+
+p:lang(en) {
+    quotes: "\201C" "\201D" "\2018" "\2019" "\201C" "\201D" "\2018" "\2019";
+  }
+
+  h3:not(:first-child) {
+    margin-top: 0;
+  }
+  .el {
+    color: rgb(255, 0, 0);
+    color: rgba(255, 0, 0, 0.5);
+    color: rgb(255 0 0 / 0.5);
+  }
+
+  .el {
+    transition-timing-function: 
+      cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+
+
+  .clip-me {
+    clip-path: path('M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z');
+  }
+  .move-me {
+    offset-path: path("M56.06,227 ...");
+  }
+
+
+  .el {
+    animation: 2s infinite alternate steps(10);
+  }
+
+  .avatar:hover {
+    filter: brightness(150%);
+  }
+
+  .ghost {
+    filter: blur(50%);
+  }
+
+  .wow {
+    filter: contrast(200%);
+  }
+
+  .no-color {
+    filter: grayscale(100%);
+  }
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
