@@ -4,21 +4,118 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/7872/7872535.png"
+    />
     <title>Portfolio || Ada Lovelace</title>
-    <style></style>
+    <style>
+      :root {
+        --blue: #007bff;
+        --pink: #e93f5c;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      header {
+        position: sticky;
+        /* border: 1px solid red; */
+        height: 10vh;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 50px;
+      }
+      h1 {
+        display: flex;
+        align-items: center;
+      }
+
+      h1 a > img {
+        margin-top: 5px;
+        height: 30px;
+      }
+
+      h1 p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-left: 10px;
+        color: rgb(225, 20, 191);
+      }
+      nav {
+        width: 45%;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      nav li a {
+        text-decoration: none;
+        position: relative;
+        color: grey;
+      }
+      nav li a:hover {
+        color: rgb(100, 100, 100);
+      }
+      /* adding hover under line transition effect */
+      header nav ul li a::before {
+        content: "";
+        width: 0px;
+        height: 2px;
+        background: var(--pink);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: 0.35s;
+      }
+
+      header nav ul li a:hover::before {
+        width: 45%;
+        transform: translateX(100%);
+      }
+
+      #home {
+        height: 90vh;
+        background-color: var(--pink);
+      }
+
+      #resume{
+        height: 100vh;
+        background-color: blue;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1></h1>
+      <h1>
+        <a href="#">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/7872/7872535.png"
+            alt="logo"
+            id="logo"
+          />
+        </a>
+
+        <p>Ada</p>
+      </h1>
       <nav>
         <ul>
-          <li><a href="#"> Home </a></li>
-          <li><a href="#"> About Me </a></li>
-          <li><a href="#"> Our Services </a></li>
-          <li><a href="#"> Projects </a></li>
+          <li><a href="#home"> Home </a></li>
+          <li><a href="#resume"> Resume </a></li>
+          <li><a href="#"> Portfolio </a></li>
           <li><a href="#"> Contact </a></li>
         </ul>
       </nav>
     </header>
+    <section id="home"></section>
+    <section id="resume"></section>
   </body>
 </html>
+
+
+
