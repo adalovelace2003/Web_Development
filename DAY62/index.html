@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon"
+         href="https://cdn-icons-png.flaticon.com/512/7872/7872535.png" />
+      <!-- <link rel="icon" href="/DAY49/logo.png" /> -->
+      <title>Portfolio || Ada Lovelace</title>
+      <style>
+         :root {
+         --blue: #007bff;
+         --pink: #e93f5bb0;
+         }
+         html {
+         scroll-behavior: smooth;
+         max-width: 100vw;
+         }
+         * {
+         margin: 0px;
+         padding: 0px;
+         box-sizing: border-box;
+         font-family: sans-serif;
+         }
+         body {
+         transition: ease;
+         }
+         body > section {
+         padding-right: 10px;
+         padding-left: 10px;
+         }
+         header {
+         /* position: sticky; */
+         position: fixed;
+         /* border: 1px solid red; */
+         height: 10vh;
+         padding: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding-left: auto;
+         z-index: 100;
+         width: 100%;
+         background: white;
+         padding-right: 20px;
+         padding-left: 20px;
+         }
+         #home,
+         #resume,
+         #portfolio {
+         padding-top: 10vh;
+         }
+         header > h1 > p {
+         cursor: pointer;
+         color: hotpink;
+         font-weight: 500;
+         margin-left: 7px;
+         }
+         h1 {
+         text-align: center;
+         display: flex;
+         align-items: center;
+         }
+         h1 a > img {
+         margin-top: 5px;
+         height: 40px;
+         }
+         #home  {
+         text-align: center;
+         }
+         nav {
+         width: auto;
+         height: auto;
+         }
+         nav ul {
+         list-style: none;
+         display: flex;
+         justify-content: space-evenly;
+         }
+         nav li a {
+         text-decoration: none;
+         position: relative;
+         color: grey;
+         font-size: 20px;
+         padding: 0 10px 0 10px;
+         }
+         nav li a:hover {
+         color: rgb(225, 20, 191);
+         }
+         /* adding hover under line transition effect */
+         header nav ul li a::before {
+         content: "";
+         width: 0px;
+         height: 2px;
+         background: var(--pink);
+         position: absolute;
+         top: 100%;
+         left: 0;
+         transition: 0.35s;
+         }
+         header nav ul li a:hover::before {
+         width: 45%;
+         transform: translateX(100%);
+         }
+         /* Highlighting the specific topic in  navbar where the user is */
+         /* it is not possible without js as far i a researched about the topic */
+         /* Highlighting the specific topic in  navbar where the user is */
+         #home-parent{
+         height: 100vh;
+         padding: 0;
+         background-image: url(https://i.ibb.co/M5KqyQy/cool-background.png);
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         } 
+         #home {
+         height: 100%;
+         width: 80%;
+         margin: auto;
+         /* background-color: var(--pink); */
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap: 1rem;
+         color: white;
+         transition: 1s ease;
+         }
+         #home > h1 {
+         font-size: 5rem;
+         }
+         #home > p {
+         font-size: 2rem;
+         }
+         #home > div {
+         border: 2px solid white;
+         padding: 12px 30px;
+         border-radius: 26px;
+         position: relative;
+         }
+         #home > div > a {
+         color: white;
+         text-decoration: none;
+         font-weight: bold;
+         font-size: 20px;
+         transition: 0.5s ease;
+         }
+         #home > div > a:hover {
+         font-size: 23px;
+         }
+         #resume {
+         min-height: 100vh;
+         /* background-color: #04c6de; */
+         /* background-color: #87ebf892; */
+         background-color: whitesmoke;
+         transition: 1s ease;
+         display: flex;
+         flex-direction: column;
+         padding-bottom: 5vh;
+         }
+         .resume-upper {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 35vh;
+         flex-direction: column;
+         line-height: 1.5rem;
+         color: black;
+         width: 100%;
+         }
+         .resume-upper > h1:nth-child(1) {
+         font-size: 3rem;
+         font-weight: 400;
+         color: hotpink;
+         }
+         .resume-upper > h1:nth-child(3) {
+         font-size: 2rem;
+         font-weight: 400;
+         margin-top: 20px;
+         color: hotpink;
+         }
+         .resume-upper > p {
+         width: 66%;
+         padding-top: 15px;
+         font-weight: 600;
+         text-align: center;
+         }
+         .resume-lower {
+         /* border: 1px solid red; */
+         max-width: 100%;
+         display: flex;
+         justify-content: space-evenly;
+         align-content: center;
+         align-items: center;
+         gap: 1rem;
+         flex-wrap: wrap;
+         min-height: 45vh;
+         }
+         .cards {
+         border: 2px solid grey;
+         border-radius: 10px;
+         width: 350px;
+         padding: 10px;
+         min-height: 280px;
+         max-width: 52vh ;
+         overflow: auto;
+         box-shadow: 5px 5px 5px grey;
+         cursor: pointer;
+         transition: 0.15s ease;
+         }
+         .cards:hover {
+         border: 2px solid rgb(72, 71, 71);
+         box-shadow: 5px 5px 5px rgb(72, 71, 71);
+         transform: scale(1.01);
+         }
+         .card-img{
+         height: 50%;
+         width: 100%;
+         }
+         .card-img > img{
+         width: 100%;
+         }
+         .cards > h3 {
+         display: block;
+         margin-top: 0.5rem;
+         margin-bottom: 0.5rem;
+         }
+         .cards-text,
+         h3 {
+         cursor: text;
+         }
+         /* portfolio */
+         #portfolio {
+         min-height: 100vh;
+         background-color: lavender;
+         display: block;
+         }
+         #div1 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding-top: 2rem;
+         padding-bottom: 2rem;
+         }
+         #div1 > h1 {
+         border-bottom: 3px dotted gray;
+         }
+         .tooltip {
+         position: relative;
+         display: inline-block;
+         border-bottom: 1px dotted black;
+         }
+         .tooltip .tooltiptext {
+         visibility: hidden;
+         width: 220px;
+         background-color: powderblue;
+         color: #9b8e8e;
+         text-align: center;
+         border-radius: 6px;
+         padding: 5px 0;
+         position: absolute;
+         z-index: 1;
+         top: 35px;
+         right: 22px;
+         }
+         .tooltip .tooltiptext::after {
+         opacity: 0.5;
+         content: " ";
+         position: absolute;
+         bottom: 100%; /* At the top of the tooltip */
+         left: 50%;
+         margin-left: -5px;
+         border-width: 5px;
+         border-style: solid;
+         border-color: transparent transparent black transparent;
+         }
+         .tooltip:hover .tooltiptext {
+         visibility: visible;
+         }
+         #portfolio .container {
+         display: flex;
+         }
+         .projects {
+         display: flex;
+         flex-wrap: wrap;
+         align-content: center;
+         align-items: center;
+         justify-content: center;
+         }
+         .project-cards {
+         /* border: 2px solid blue; */
+         margin: 20px;
+         max-width: 52vh;
+         height: 32vh;
+         border-radius: 30px;
+         }
+         .project-cards > img {
+         /* border: 2px solid blue; */
+         height: inherit;
+         display: block;
+         margin: auto;
+         border-radius: 30px;
+         cursor: pointer;
+         width: 350px;
+         }
+         /* project card 1 is not used for now */
+         /* hovering and text overlay effect */
+         /*       #project-card1 {
+         position: relative;
+         }
+         #project-card1 > img {
+         opacity: 1;
+         display: block;
+         transition: 0.5s ease;
+         backface-visibility: hidden;
+         }
+         .middle {
+         transition: 0.5s ease;
+         opacity: 0;
+         position: absolute;
+         top: 50%;
+         left: 135%;
+         transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         text-align: center;
+         } 
+         #project-card1:hover {
+         opacity: 0.5;
+         }
+         #project-card1:hover .image {
+         opacity: 0.3;
+         }
+         #project-card1:hover .middle {
+         opacity: 1;
+         } */
+         /* giving the links to the project-cards */
+         .project-cards img {
+         box-shadow: 5px 5px 5px grey;
+         }
+         .project-cards:hover img {
+         box-shadow: 5px 5px 5px none;
+         }
+         .project-cards {
+         transition: 0.1s ease;
+         }
+         .project-cards:hover {
+         transform: scale(1.01);
+         }
+         /* adding hover overlay effects to the cards */
+         .overlay {
+         border-radius: 30px;
+         }
+         .text {
+         background-color: #04aa6d;
+         color: white;
+         font-size: 16px;
+         padding: 16px 32px;
+         }
+         /* #project-card01 */
+         #project-card01 {
+         position: relative;
+         }
+         #project-card01 img {
+         display: block;
+         width: 80%;
+         }
+         #project-card01 .overlay {
+         position: absolute;
+         bottom: 100%;
+         left: 10%;
+         right: 0;
+         background-color: orangered;
+         box-shadow: 5px 5px 5px orangered;
+         overflow: hidden;
+         width: 80%;
+         height: 0;
+         transition: 0.5s ease;
+         }
+         #project-card01 .text {
+         color: white;
+         background-color: orangered;
+         font-size: 20px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+         text-align: center;
+         }
+         #project-card01:hover .overlay {
+         bottom: 0;
+         height: 100%;
+         }
+         /* hovering and text overlay effect */
+         #project-card2 {
+         position: relative;
+         }
+         #project-card2 > img {
+         display: block;
+         width: 80%;
+         }
+         #project-card2 .overlay {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 10%;
+         right: 0;
+         height: 100%;
+         width: 80%;
+         opacity: 0;
+         transition: 0.5s ease;
+         background-color: purple;
+         box-shadow: 5px 5px 5px purple;
+         border-radius: 30px;
+         }
+         #project-card2:hover .overlay {
+         opacity: 0.5;
+         }
+         #project-card2 .text {
+         color: white;
+         background-color: purple;
+         font-size: 20px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+         text-align: center;
+         }
+         /* project cards 3  */
+         #project-card3 {
+         position: relative;
+         }
+         #project-card3 img {
+         display: block;
+         width: 80%;
+         }
+         #project-card3 .overlay {
+         position: absolute;
+         bottom: 0;
+         left: 10%;
+         right: 0;
+         background-color: #008cba;
+         box-shadow: 5px 5px 5px #008cba;
+         overflow: hidden;
+         width: 80%;
+         height: 100%;
+         -webkit-transform: scale(0);
+         -ms-transform: scale(0);
+         transform: scale(0);
+         -webkit-transition: 0.5s ease;
+         transition: 0.5s ease;
+         }
+         #project-card3:hover .overlay {
+         -webkit-transform: scale(1);
+         -ms-transform: scale(1);
+         transform: scale(1);
+         }
+         #project-card3 .text {
+         color: white;
+         font-size: 20px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+         text-align: center;
+         }
+         /* project-card4 */
+         #project-card4 {
+         position: relative;
+         }
+         #project-card4 img {
+         display: block;
+         width: 80%;
+         }
+         #project-card4 .overlay {
+         position: absolute;
+         bottom: 0;
+         left: 10%;
+         right: 0;
+         background-color: grey;
+         box-shadow: 5px 5px 5px grey;
+         overflow: hidden;
+         width: 0;
+         height: 100%;
+         transition: 0.5s ease;
+         }
+         #project-card4 .overlay:hover{
+         box-shadow: 5px 5px 5px grey;
+         }
+         #project-card4:hover .overlay {
+         width: 80%;
+         }
+         #project-card4 .text {
+         color: white;
+         background-color: grey;
+         font-size: 20px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+         white-space: nowrap;
+         }
+         /* project card 5  */
+         #project-card5 {
+         position: relative;
+         }
+         #project-card5 img {
+         display: block;
+         width: 80%;
+         }
+         #project-card5 .overlay {
+         position: absolute;
+         bottom: 0;
+         left: 10%;
+         right: 0;
+         background-color: red;
+         box-shadow: 5px 5px 5px red;
+         overflow: hidden;
+         width: 80%;
+         height: 0;
+         transition: 0.5s ease;
+         }
+         #project-card5:hover .overlay {
+         height: 100%;
+         }
+         #project-card5 .text {
+         color: white;
+         background-color: red;
+         font-size: 20px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+         text-align: center;
+         }
+         /* #project-card6 */
+         #project-card6 {
+         position: relative;
+         }
+         #project-card6 img {
+         display: block;
+         width: 80%;
+         }
+         #project-card6 .overlay {
+         position: absolute;
+         bottom: 0;
+         left: 80%;
+         right: 0;
+         /* background-color: #008cba; */ /* enable this  */
+         /* for temp bg image */
+         background-image: url("https://img.freepik.com/free-photo/dramatic-red-fire-flame-border-frame_53876-108393.jpg");
+         background-position: left;
+         /* for temp bg image */
+         overflow: hidden;
+         width: 0;
+         height: 100%;
+         transition: 0.5s ease;
+         /* remove this two line to show the project preview when hoverin instead of showing loading screen*/
+         width: 80%;
+         left: 10%;
+         }
+         /*       #project-card6:hover .overlay {
+         width: 80%;
+         left: 10%;
+         } */
+         #project-card6 .text {
+         color: white;
+         font-size: 20px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+         white-space: nowrap;
+         }
+         .overlay:hover {
+         opacity: 0.75;
+         }
+         /* adding  CLICK TO PREVIEW WHILE HOVERING OVER THE PROJECT NAME */
+         .tooltip2 {
+         position: relative;
+         display: inline-block;
+         }
+         .tooltip2 .tooltiptext {
+         visibility: hidden;
+         width: 120px;
+         background-color: powderblue;
+         color: black;
+         text-align: center;
+         border-radius: 6px;
+         padding: 5px 0;
+         position: absolute;
+         z-index: 1;
+         bottom: 30px;
+         right: -65px;
+         font-size: 13px;
+         }
+         .tooltip2 .tooltiptext::after {
+         opacity: 1;
+         content: " ";
+         position: absolute;
+         top: 98%;
+         left: 7%;
+         margin-left: -5px;
+         border-width: 5px;
+         border-style: solid;
+         border-color: #000 transparent transparent transparent;
+         }
+         .tooltip2:hover .tooltiptext {
+         visibility: visible;
+         }
+         /* css for loading animation */
+         #project-card6 .ring {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 150px;
+         height: 150px;
+         background: transparent;
+         /* border: 3px solid #3c3c3c;  original*/
+         border: 3px solid red; /* change this color to adjust the color */
+         border-radius: 50%;
+         text-align: center;
+         line-height: 150px;
+         font-family: sans-serif;
+         font-size: 20px;
+         color: #fff000;
+         letter-spacing: 4px;
+         text-transform: uppercase;
+         text-shadow: 0 0 10px #fff000;
+         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+         }
+         #project-card6 .ring:before {
+         content: "";
+         position: absolute;
+         top: -3px;
+         left: -3px;
+         width: 100%;
+         height: 100%;
+         border: 3px solid transparent;
+         border-top: 3px solid #fff000;
+         border-right: 3px solid #fff000;
+         border-radius: 50%;
+         animation: animateC 2s linear infinite;
+         }
+         #project-card6 span {
+         display: block;
+         position: absolute;
+         top: calc(50% - 2px);
+         left: 50%;
+         width: 50%;
+         height: 4px;
+         background: transparent;
+         transform-origin: left;
+         animation: animate 2s linear infinite;
+         }
+         #project-card6 span:before {
+         content: "";
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         border-radius: 50%;
+         background: #fff000;
+         top: -6px;
+         right: -8px;
+         box-shadow: 0 0 20px #fff000;
+         }
+         @keyframes animateC {
+         0% {
+         transform: rotate(0deg);
+         }
+         100% {
+         transform: rotate(360deg);
+         }
+         }
+         @keyframes animate {
+         0% {
+         transform: rotate(45deg);
+         }
+         100% {
+         transform: rotate(405deg);
+         }
+         }
+         /* css for loading animation */
+         /* Contact Section */
+         #contact {
+         height: 100vh;
+         padding: 10vh 0 0 0;
+         background-color: white;
+         }
+         #contact-me {
+         height: 60vh;
+         margin: auto;
+         display: block;
+         }
+         #contact-me h1 {
+         height: 10vh;
+         display: flex;
+         align-items: center;
+         align-content: center;
+         justify-content: center;
+         font-size: 50px;
+         font-family: sans-serif;
+         font-weight: 400;
+         color: hotpink;
+         }
+         form {
+         display: block;
+         width: 80%;
+         margin: auto;
+         }
+         .row1 {
+         display: flex;
+         align-content: center;
+         justify-content: space-between;
+         align-items: center;
+         width: 98%;
+         }
+         .form-group{
+         width: 49% ;
+         }
+         .form-group > input {
+         height: 55px;
+         padding: 10px 20px;
+         display: inline-block;
+         width: 100%;
+         }
+         input:focus,textarea:focus {
+         outline: 1px solid rgba(255, 105, 180, 0.868);
+         box-shadow: 1px 1px 5px hotpink;
+         }
+         .form-group input,
+         textarea {
+         background-color: #e8edfc;
+         margin: 10px;
+         border: 1px solid #ced4da;
+         border-radius: 5px;
+         color: grey;
+         font-size: 16px;
+         font-weight: 700;
+         }
+         textarea {
+         padding: 10px 20px;
+         height: 140px;
+         width: 98%;
+         resize: none;
+         }
+         button {
+         display: block;
+         margin:auto;
+         padding: 10px 20px;
+         width: 98%;
+         margin-bottom: 10px;
+         /* background-color: linear-gradient( #EEC0C6 100%, #7EE8FA  100%);; */
+         background-color:  hotpink;
+         border: 1px solid pink;
+         border-radius: 5px        ;
+         font-family: sans-serif;
+         font-size: 15px;
+         color: white;
+         font-weight: 800;
+         cursor: pointer;
+         margin-top: 7px;
+         height: 40px;
+         transition: 0.25s ease;
+         }
+         .btn:hover {
+         background-color:rgb(255, 45, 150) ;
+         height: 50px;
+         }
+         .btn a {
+         text-decoration: none;
+         color: white;
+         font-weight: 700;
+         vertical-align: top;
+         }
+         .btn a {
+         overflow: hidden;
+         position: relative;
+         display: inline-block;
+         text-decoration: none;
+         }
+         .btn a::before,
+         .btn a::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         left: 0;
+         }
+         .btn a::before {
+         background-color: none;
+         height: 2px;
+         bottom: 0;
+         transform-origin: 100% 50%;
+         transform: scaleX(0);
+         transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+         }
+         .btn a::after {
+         content: attr(data-replace);
+         height: 100%;
+         top: 0;
+         transform-origin: 100% 50%;
+         transform: translate3d(200%, 0, 0);
+         transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+         color: rgb(27, 234, 27);
+         }
+         .btn a:hover::before {
+         transform-origin: 0% 50%;
+         transform: scaleX(1);
+         }
+         .btn a:hover::after {
+         transform: translate3d(0, 0, 0);
+         }
+         .btn a span {
+         display: inline-block;
+         transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+         }
+         .btn a:hover span {
+         transform: translate3d(-200%, 0, 0);
+         }
+         .footer-container{
+         height: 30vh;
+         background-color: #e8edfc;
+         padding: 20px;
+         color: black;
+         }
+         footer{
+         min-height: 17vh;
+         }
+         footer .container{
+         /* border: 2px solid red; */
+         height: 100%;
+         width: 85%;
+         display: block;
+         margin: auto;
+         }
+         footer .container {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         align-content: center;
+         flex-wrap: wrap;
+         }
+         .container > div {
+         padding: 10px;
+         }
+         .contacts{
+         /*flex: 1;*/
+         min-width: 350px;
+         }
+         .arrow-up{
+         /* flex: 1;*/
+         width: 350px;
+         }
+         .icon-n-copyright{
+         /*flex: 1;*/
+         width: 350px;
+         display: flex;
+         }
+         .contacts{
+         line-height: 20px;
+         }
+         .contacts span {
+         height: 25px;
+         }
+         #built {
+         margin-top: 20px;
+         }
+         .arrow-up{
+         display: grid;
+         align-items: center;
+         align-content: center;
+         justify-content: center;
+         }
+         .arrow-up  img {
+         height: 40px;
+         filter: grayscale();
+         transition: 0.2s ease;
+         }
+         .arrow-up img:hover {
+         filter: none;
+         height: 45px;
+         }
+         .icon-n-copyright{
+         display: flex;
+         flex-direction: column;
+         align-content: center;
+         align-items: flex-end;
+         }
+         .icons {
+         margin-bottom: 10px;
+         }
+         .icons a img {
+         height: 30px;
+         margin: 7px;
+         filter: grayscale();
+         transition: 0.1s ease;
+         }
+         .icons a img:hover {
+         filter: none;
+         /* height: 33px; */
+         transform: scale(1.1);
+         }
+         /* making the page responsive */
+      </style>
+   </head>
+   <body>
+      <header>
+         <h1>
+            <a href="#">
+            <img
+               src="https://cdn-icons-png.flaticon.com/512/7872/7872535.png"
+               alt="logo"
+               id="logo"
+               />
+            </a>
+            <p>Ada</p>
+         </h1>
+         <nav>
+            <ul>
+               <li><a id="a-home" href="#home"> Home </a></li>
+               <li><a href="#resume"> Resume </a></li>
+               <li><a href="#portfolio"> Portfolio </a></li>
+               <li><a href="#contact"> Contact </a></li>
+            </ul>
+         </nav>
+      </header>
+      <!-- home -->
+      <section id="home-parent">
+         <section id="home">
+            <h1>Ada Lovelace</h1>
+            <p>I love playing with keyboard and this is my website.</p>
+            <div><a href="#resume" id="learn-more"> Learn More ⇩ </a></div>
+         </section>
+      </section>
+      <!-- resume -->
+      <section id="resume">
+         <section class="resume-upper">
+            <h1>Hi, I am Ada Lovelace.</h1>
+            <p>
+               I am a computer enthusiast and I love playing with computers and codes
+               and I have been coding since few months. Welcome to my world.
+            </p>
+            <h1>And I love.</h1>
+         </section>
+         <section class="resume-lower">
+            <div class="cards">
+               <div class="card-img">
+                  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUREBAQEBAWFxgWFRYQDQ8VFRUPFRcXFhcVFxgYHyggGBolHRUWIjUhJSkrLi4uGB8zODMtNyotLisBCgoKDg0OGxAQGy0lICYtLi0tLy0tLS0tLS0uLS0tLy0uLS01Ky0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIEBQYHAwj/xABJEAABAwICBAgKBwgBAwUAAAABAAIDBBESIQUGEzEiMkFRYXGBkQcUI2Jyc5OhsdEVM4KSsrPBJEJDUlNUwsM0JWODlKKj4fD/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAPBEAAgIBAQMICAQEBwEAAAAAAAECEQMhBBIxE0FRYYGRocEFIlJxsdHh8BQVMvEjcrLCM0JDYoKSoiT/2gAMAwEAAhEDEQA/AOMoSIXtmNCoSIQUKhIhBQqEiEFCoSIQUKhIlaLmyEUCFt9WdVaea212rr8z8PwCzmtOjW01VLAwuLGO4JcQThIBGfLvt2IYY9ox5JuC4rUq0JEiHRQ5CajEgochekUD3AlrHOA3lrHEC+65G5eJ6cutLFDkJuJCChyEi6TPqnRNp43AYpTE0vcKhxO0LQXZA2Gd8rIc+baIYa3r16Dm6FJ0lTiN5a29ulRUN1TVoVCRCE0KhIhBQqEiEFCoSIQUKhIhBQqEiEFCISIVLAqEiEsCqdBomoe0PZBM9h3ObGSDYkGx6wR2KArKu4lN6j/fUK0VvOjPJJqkud+TfkJ9B1X9tP7JyPoOq/tp/ZOUWw5h3JLDmC05LrK3k6V3P5kt+hKob6WcdcL0R6FqXboJe1hHxVrLpuYRh7C2253BGR+X/wBKE7WKoP8AFA6gFXcKKWd80fE9afVOsfugt6T4x+qsqbwd1jt76WP06gj4NKpPpapfkJZXHmab/AJ4irX7mVjuqOoPwCndiUyfifbjHsv4s3ejNTnRfXV9IOgSF3xIXppjVfR8rmvl0k1hAscBjzHJvJ6VgBoWsdvp6m3nxvH4l5z6HkYWh4jjLiQMdRABcC+ZxcHtspdM5Vs097ee0a9SivmbFugdBM4+kJ5ehssNvcy/vTr6us/cqJT0un/xNllIdAyONmy0jjzNq2SG3VHiXsNVp+Vzeyl0m4d7YCFCjHgVePHH9Web7dPBGnOsOhI+JozH1xNd+YVP0FrXQzTNp4dGQxY8ViaenFrNLuTPkWPj1XIvje5tjlhp7BwsDcbZ8dsyRnbcl0FCIa+BofiGIZnYXu8ObbyT3j336E3YkZNm2aUZVJuVN6uT4LrLzVWun0ZRTymKzzOxoa8ObiFgL3tuzK9m+E4O+uoYnDlza73FqrqxscdJaZrzE7SUhkEVg50TA8EA8/BCr6gaIdnGdJwnmf4s5vZa5SEE42yu7iyzlKeOUm3xSdcEuZ9xoDrhop/1uiWX52U1N8Qbo8d1ek41PJEfNbOPwlZPQOjKecv29WyltbBjic/He9xcEWtYd6XSuhooml8VdTVFiAGxkhxvygXOSu8aNPweCOTk4ynF9Tkl31XibCDRWgS9r2Vb4y0hwDp2gEjMXxjd2qRWas0M+cOk478l3Qu+BCydPqTVyQtmj8Xc1zQ4N8ZAeAcxcHcei6pq3RUsUghkjtKbWaC1xOI2FsN955EUadIpHBvy/hbS2101Ku81Nd4PpN7KuCTscP1Ko6jVSpZv2J9GQ/qFHk0VWQ8amq4//BM0d4Fl5N0hO3LbTDnBlfkeaxUuCbqnf37zrwrO1ccsZL+Vf2jJdFTN3s7nNP6rxFHJe2B1+pSxpqflkDvSbGf0XvSVskrwzBCSd52RFhyngkLN4zpcsiVtIit0LUnMU8xHRG5H0HVf20/snJ2lXRmQiNoDRlym5G85qHYcw7k5LrIUsjV2u5/MlfQdV/bT+ycj6Dqv7af2TlFsOYdyLDmHcp5LrJvJ0rufzPSroJYrGWJ8YN7Y2kXIte3eFFVjL/xW+vk/KiVasno6L45OUbfX4OhUJEKLLioSISwCEIVLAIQhLAKyruJT+o/3zKtU+s4lP6g/nTrTE/WMsvGPv8mRkIQugsaDVWUEvhLGEvF2l1KyY4hvy2ErjlnYWAsStWyJzLgtnFuXZSsFvswQfFc3gkLXBwtcG+YuD0Eco6Fr4q+lLGvc6na48JwkNNI4Hmt4i4t3cUGwuVSdtaHnbTgrIppOnxpXr7rXnXaSZ6og2dM4enWOb+LSI+CcaqJ4tjge7mM9M4+/bn4odrNC0WbMxnqhWN/LbEoh1uYD9bO77Na4d0lb+ix9b7/YzjhUeEZ0/wDal/d5EyKiIN2U4PSylB98ejh8V71MdVfaRiZoDTaEQ1kTHvzzMhMThvG7LLcqeo1tgcOFT4+ukpP9u0UB+scRaW+LWad4a3RrAbG/8Olafeot/dmkMDi/Vxya65R+Dj59pNbpOSnlBlp4YjITjdBK6aZ3Lnimdy243Sr2WlfIbiKN49HRz/wUspPesVV6z1TidnU1MMeQaxlVIA1oFrXba69Ga1ThobZjjaxdI6okcTznaSEX6hboVW9Dsksr13UvdJrvpR+LNbR0j4nOLGvidIRcmPSLAXDdYMp4mjssq7S9O4VNPM+WEhj2FznVRBAY8Ot5eZ7t19waOgrKu03KTfDTX5/o+hv37O6867S00wDZZMTQbgBrGgHdezQFG/TshY80lU2u+b46cHKjU6yVlPMxsEVRDlPPK4vMmE7RxIIc1pB4xUyj0KyKBskYpKhziQ576kBrWjCbM4TbuIOLhXFrADMlc8urLR+lZI7NDzs75tNyO0cvV0q0ctcSstklHGoY5aLp5+1U0bKu0E+oa8x0kYLALvgeC0tuGgAFxNzckbgbOFr8JYt9HK3jQzN64Xj9FKqNMTyRiIzMEYJIa0ua3EcicJFr9O/M55qBHtRxHuHoSj9Cryz7zNcWJ44qKfffh1d/kX2rWhIZw8zSOjIcA0MfGDe13Ehwvyt3dKuXam2cHxVcjXAgguiuQRuIcHBQtDa2mCERSx1LrE4nOOIEk33P7B2Kyg1uo3G7og1x5TRx4u9lynKvicOaW1bz3brqpr4eZ6O0ZpT9zSQkbybWeQ/ia5RNG6H0nSSuniigmkcCHFzo5L4jdxsSLEkLR0en6An/AJDGO3Z1M7QLdDjgVvBXU782VTXjzZ6Vwt3XV9482e05MScHBJPinCrX/Gr8TnusmnKrAYqvR+j4nSAhsniIEo3Xcx+IgHPf0qlh8hDj3Sy5N52xc/b+oU7WDSsdROZCcbGmzB+z2MLTlxgCMW/ed6qdLVW0diIAPQeKz91uRtflNudSqWh7Gz4t2Cjupc7q6vo1shpEgSq9nWCEIQEqb/it9fJ+VEq9WEh/Zm+uf+XEq9c836zIxfp7X8WCEIVLNAQhCWAQmoVLLDkJqEsDlOq+LB6o/nTKvU6pPBg9T/tmWmN6mWXjH3+TPFCv9WqSNzHvexr+GGjE0HItJO93QP3D1jctRS6Hpnb6eE/+MLZSs5820LE6aOcJq7DR6rULjwqVh6jIPgVR+E7VykpIYZKaLZufIQeHI67Q0m1nEjfZHLQxx+kMc8ix07fUvmc5Rh6QOtLFvXS/BzOI6eW4Gcx3gf02KnE6Npz8jDeSs5lg84d4QWecO8L6Ao5jKcMbWuIF97BkOuy9o4pHYbRt4YLm8OIXaN+85b+VUaRxfmkvY8fofPGDzh3hGDzh3hfQ7IpDhtG3h3w8KLMjfy5dqGRyHDaNvCcWt4UWbm3uN+XFO9Q49Y/NJex4/Q+eNn5ze8JMHnDvX0Q2KU2tG3NxYOFFxxe439Bz3I2cn9NvGwcaLj82/wB+5V3OsfmkvY8fofO+Dzh3hGDzh3r6HMcmfk25ODDwouOdw39O/cldFKMV4hwXBp4UWT3WsN+fGCcn1k/msvY8fofO+Dzh3o2fnN7wvocsku9uzF4xieLx5NOd9+fYnbCW9tkL4cfGi4nPv929NxdJH5pP2PH6HzywW3PA6n2XoJXf1L+k4Oz7eVdz+kW8ze4JfpJvM3uCvuEP0nJ/6fj9Dg+Dzh3hJg6iu8/STeZvcFzfwhuD6kOFs4WbgORz1NNI32fbpZZ7rjXb9EY5KmlAVkz0B4TkwFOutEyoqEl0XU2CTIf2ceuf+XGoKmSH9nHrX/lxqCuWb9ZkYv09r/qY5CahVs1HITUJYBCVCqBEJUIBFOquJD6r/bKoSl1HFh9V/tkWmLiZz4x9/ky+1dNoXZj64ZXbfKM52w4rZ78VujlWooZVldEXFMDwrGY8k2G4ZbK5wX6hi6bZK8oZVtj4P3s4NsVy7DXUMqzfhaqbxU7POkPcGD9Vb0Mqy/hQkv4sOYSnvMfyUM4Nlh/9MH7/AOlmJg3rXaErNnFa9ryO/CxZGDerWWQhjQDyu+DEx6yPY2iG+kjp3g/rNpUub5E+SJ8seCOG0X61p6a7ABhpnmnwxGxPlXyNiIdu6VzbwVvJqpLiB3kd1QeDx29G9dXr27N4c/xBkZ3tizJku1sZzG8H4rLaZOCe7xr9/Bs4MeCDz7snpaX/AGWmv81d/UOhpGNazgROc07yM3Yt4I5bbuhRKyEwsMuCmdHBjnJxgbQFsrjHYb8OIdynNsDewPWOc3I6iqTSkIhg2uGneym29Q6OQ22jCyV2zaPt7vNC8vY9qnOe63bfyb7NaWnS3qz1vSXo7FixOUYpJLium4pXfHjJ3x0SuiTODHjvHTO2IdVGz+Ox+2tEMs7c3UnlhF2mOlOG9Tfab2Ev8lu9yqqmDY7S8VDJ4vtKt3D+sZJ4zaAcHPDcZdAXo6lIJbsaA4CasnacZjjKRBxeTm6F6588op8333E9sZcQ3BSgvtUg7TisaYyY93Kkp43TFrWQ096hraptnElkcZp7xmzeXEPeoIpS8hgioQXubVg7U8GNjoiYOLlexFulWWqwlLXVcLaKLbBkoaXuaWRyRReTybuuy9udRJ0r+YjjTkovn6KuufjpwIEjzta9uypgWQxkgkgNuyQ3ZweNkrAxu2mdPTkGAWwEkG7iCb4eOuTeEmskFfIS4NJZHfYyOLTwefK628WrVS2kpoTOx80dS2bGyRxaISS5zTex3Hi89lntOTkoKV1enu04+CO/YthWdxt8UnVcaq/iaCl0eAIA2GAhgIdtiA5xLctoQCCRzgryggt4uDBS3dUStzdYmzZjZ3Bybll2K0c0Eg2GRvu3kgjPsNuxU9awPlpXMgpXNM8gBkfZzsME7S2QYcmAtNt+4Li2Pap5W4y6OPZ9/sdXpT0diwRU4aW+HN02uLWiXFtd+uD01pHDUTN4LbSPFm8UWcch0LL6yT4y13/b+D3pNZZCKyoGTbTyCzTwRwzkOhQap92Mv/KfxvXq5FUTDBhUd2X3wKl28rR6r6nVNdd0YbHCDYySk4S4W4LQM3HPq6Vmncq7xrdVnRej4IaU4C4CMPZkQGsDnEEbnOLrk79/OsYvgjfaZ5VUMfF3b40l1c7d0u/mOd6c8H09MLmQO5sUL2AnmBNwVkXsIJBFiMiDzrXaD1qqmzsEs01RC9zY5IZZXvY+FzgC3CTk7PJwzBsqjWqmEVTNEDi2cskWL+YRvLAfct9Vo/vm5y+PeWknfXST8NCmQhCGpIlPkG+tf+XGoSmS/Ut9Y78tiiLmn+pjHw7X8REJUKpcRCVCARCEKtgEIQlgFMqN0Xqv9kihqXLxY/Q/2SLTE9TPJ/l9/ky2o3tEEYGHHjfcjY4sOVr2OO3pADmurahlWOsrmq0FOyBlTG8TQOFy6CR5MbuVkrcixw7R0reMlH1em/mY5canq3XBG4oZVm/CNJd8I5o3HvcPksy2rlG6WYdUz/mm1NS+Sxke95AsC9xJA5s0bsxw7I4ZFNs84d6sJXcFvb/iq1uSm09bhFrMI86Jjj3kKkZKLtnVNXwL7U7TzKKZ0r4G1AMeANfa18QN8+paKi8IkMb5n+IRuErw8AtjtHgYxmFvNmwntWE8eb/Th9hF8lc6oQ+NVcUOCMsvjfaGP6tnCPJy2A+0pnnxpOTX2jD8LystY6vTi+fTq6jtFJMTEx8nBcWNc+/IcILr9Wawr/CfDiJNA2VuYBkwElmdibjLfu6VqtcazY0NTJyiNzR6T/Jj3uXDPHR/LH7NnyXkei1BRlOS1ei93P8ALsPU9LfxJRxPVJJ8efVeCXidRd4XYCLfRMPN/C+Sr5PCRA6//TYRfmZF8lz01g5mfcam+ODmb90L1IzxR4J/faeZlwcrXKK666+FG3frzCaeGAULA6IwkyAMxPEL43OB9IMI+0pUnhEpzNHL9GxBrGSMMY2eFxeYiHEW3gMcPtLn3jQ5m/dCPGxzN+61W5XH0Pn8e0p+Fh7PibKTXGnc+qkNBGfGI2MaLR+RLWyNLmZbziB7FpdXdfIp6hkApxTteAwYcNjKL2JtyuFh1gLlXjo/lZ9xq9KfSmBzZA1l2ODhaNl7tIItl0LPLyWWDhJPX7RrixvDNZILVcNeqq7jvWnNLClgfUGPahmElmK2K7g3fzZrnMevNM3Y/wDT2HZSvkN9n5Rr2zAMdwdw2o+4ul1dOyoicw2LJWEbgRZ24+8FcCmqDG50b44Q9ji1w2EeTmmx5OcLz/RWSEYSjJa35V8z0PS+FZZQlVqtOPU+bp07h2laoSzyytbga97nhv8AKHEkN7LqPM7gNHQfiSnmvH9OD/08XyUSpqMRvwR6LQB3DJerkyxkqRwwg1Sa+/AildJ0ZrPBVUopa5pdYNBIeGSB7BhbNE4gjFYkFpyOa5uiyrEtkxRm1Lg1wfv0febtr6KidtoRUVFQ03i8aZBHFE8cWQtY5xlc02IBLRfOxtZY2pmL3FxJcSSSSbkuJuSekrwCVaJkpNcQQhCmyT1m+pb6x34I1EUqT6oesd+BiirlyP1i0Fp3ghCFWywIQhLAqEqFUkRCVCARSpN0fq/85FGUp/FZ6P8Am9a4uJSfN98x5q51VrGxT8OaSFrmluJjm4RJbgbVrgQ6O+R5r3uLKmQtnqqM2k1TLzSlMxz3NewUtSN7RlBJf95h/dv/APrqpr6GSF5jmYWPABsbbiLg5dCsaOrZKwU9ScIGUMx3xH+R3PGf/b1boWkKOWJ+CZrg4ZAm5BaN2E8repHqZ4bj6j4+XSueup8CEU0pxSEKjN0xi6v4GNE2ZNVuGbjsmZfuts55HWS0fZXKCvobUeh2Oj6ZlrExiQ334pfKG/3rdi870hPdx10s7tijvZL6Ct8KLraNm6XRj/5GH9Fwpdt8LbraP65Yx+I/4riarsSrCu34lNrleeS6KX/lPzGpLJyn6P0PPOC6KPE0Gxc58bG4gLkYnkC4BB6LrqMLK5C1Oj9AQjOpfM881MWNA+28G/Y3tUXSerczC98bDJT8J7HbSIvMDbm7mA4gWgG+WVjyLbJs+XHFSnGkzGO0QnLdX07CgshOSFZGp9H6ryl1HTOO8wRE9ezauTeFjROxrTKBZk7Q8brbQcF49wd9tdS1JdegpD/2WDuy/RUPhhoMdGyawxQyDO38OTgkfewdy8rC+T2prpbX32no/wCJsUJPjuxfbWvmcXQEieAvZR5oBOCQJ4WiKsQJyELQgEIQhA6X6sesd+FqjKTL9WPTd+FqjrmyfqNIcBEJUKhYRCVCAVCRCAVCRCAFJPFZ6P8Ak5Rl6iZwFsrDddjT08o6VaE6ZElY5Cbt3eb7NnyRt3eb7NnyWnKopuMcpM9fK+OOJ7y6OO+zBA4OK1wDvtkMr2UTbu832bPkjxh3m+zZ8k5WI3WKQmFO25832bPkjbHzfZs+Sh5ETusSOPEQ0uDQSAXOvZoJtc25AvrWn0fGxobhBAAHCHIBZfJTpj5vs2fJfUujdLNmhikifjY5jSHHe7IZnmN9457rDKoyaLptKjF+HOiIoY3RtOEVDDJa9gMMgB6M3Adq4UvreeCOeN8Uoa9jwWvacwQeQ85XANa9QKyllk2UDqimBBY+OGJzsDjYNc0DFiG4kDpyUQqKoylOpvefHnfTSVeGnTw46GFstZoyctp2Rbm3c8gE2c91syOcANHYrnV7wW11QMc7Y6SPfaSKN0p+wLYftEHoWZZUXAPQvS9HqO+5vm4dtmOae8t1edd9JProshKpVJXujN2uIFxcBxAcOVptvB3EcoVKJkomXrvKpLdlqjm3WtUUdXT4Hll723HnHIvFbBmqNdUxeNU0DZ4rlpDTGZLt38F2ZGY3X6kupWp1RXVWwkjdDFHY1BfThrmN5GAEcd24dp5F87lUY5JRXBM74ZLjf7nXfBfS7TRtM59x5MtAyzAe8A9RCm6+6FEmj6prASdk5wBtm5nDFum7VfxQsgjbFE1rGMaA1rbCzBkLDmWe180hbRtXm0EwuaC7ccXBt1m9h0kLieGDk5Vrdm+PLkjFRvs5j5nCeAn7Y8zfZs+SNsfN9mz5Lt30Z0xAEoCTbnzfZs+Sdt3eb7NnyUrIiN1ioTdu7zfZs+SNu7zfZs+SnlURuMchN27vN9mz5I27vN9mz5JyqG4x0nEHpH4NXgnvkJyNrdDWj4JiylK3ZpFUhUJEKAKhIhAKhKhVJEQlQgEQlsiyARCWyLIBEJbIsgEQlsiyARdO8DenXB0lE91222kQPIQfKNHXcG3QVzKysNXtImmqYqgfuPBdbljPBePukqSGfSbKgggjk+Kn6Pq7khzs+S/wVBFUtc0OaQ5rgC0g5FpFwR0WT9orOFmakaiS1jc2Fs+pfMWstAaernh5GSOw25YicTD90hd5fVuIwlxI5iVidfdVnVVp4LbdowuaSBtGDMWJyDhnv33Wuzfw5a85E3vKjlOIoxlS6nRU8ZwyQTNPTE/PqNrHsWi1T1Mlme2SpY6KnBuQ8WdJb90NOYaeUnk3dHc5pK2zHdOveDTRroNHQNffE8bUgi1tocQHXYhXFZWlrrNscs+vmVUK94bhDrAc2+3NfmXjtF5W5bbfPZ0uRMfPf39l1yLwvaxOklFEw2jjwvkseNMRdrT0NaQet3Qul1VY2NjpHmzGNLnE8jWi5+C+d9I1bppZJn8aRznnoLje3Zu7FMkIkZCWyLKpcRCWyLIBEJbIsgEQlsiyARCWyEAiEqEAiEqEAISoSwIhKhLAiE5CWBqE5CWBqE5CWBqE5CWBqE5CWDXana7PpcMM3Dpb2vYl8QPK3nb5vdzLrcMzXtD2ODmOALXNNwWnMEHmXzstpqHrgKb9nqCfFyeA7M7Jx3g+YfcfdaMukrKPQdYui684JmvaHsc17DmHNcCCOghPWpkLdF0iEAt0XUHSeloKduKeZkY5A53CPU0ZnsCwWn/COXAso4yy+W1kti62s5Os9yq5JEpNkrwmayNDDRROu91tsQeKwZhmXKTa/R1rmSe5xJJJJJNySSSSd5J5SkWTds2SpDUJyEsDUJyEsDUJyEsDUJyEsDUJyRLAiEqEsCISoSwKhCFABCEIAQhCAEIQgBCEIAQhCAEIQgBCEICTQaRmgN4JpIjvOB7gCekbj2q7g170g3+OH+nDEfeAEiEDR6v8INef4kTeqBn63UCq1srpBZ9XLbzC2P8ALAQhLZFIp3uJJcSS47ySSSeknekQhCQQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgP/Z" alt="" />
+               </div>
+               <h3>Programming</h3>
+               <div class="cards-text">
+                  I absolutely love programming! It's one of my favorite activities and I can spend hours coding and problem-solving.
+               </div>
+            </div>
+            <div class="cards">
+               <div class="card-img">
+                  <img src="data:image/jpeg;base64,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" alt="" />
+               </div>
+               <h3>Web Development</h3>
+               <div class="cards-text">
+                  I am interested in web Development. I have been learning HTML and CSS since past few months. I will now be learning JS.
+               </div>
+            </div>
+            <div class="cards">
+               <div class="card-img">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIySAESvGHOKxW0xuepSg5-z2dLUq2mAq7Mw&usqp=CAU" alt="" />
+               </div>
+               <h3>Python</h3>
+               <div class="cards-text">
+                  I have been learning python since few weeks. I have completed all the basic topics and i am moving towards the practical approach of it.
+               </div>
+            </div>
+         </section>
+      </section>
+      <!-- portfolio -->
+      <section id="portfolio">
+         <div id="div1">
+            <h1 class="tooltip">
+               What have I done ? <span class="tooltiptext"> My Projects </span>
+            </h1>
+         </div>
+         <div class="container">
+            <section class="projects">
+               <!-- <div id="project-card1" class="project-cards">
+                  <img src="python-img.png" alt="" />
+                  <div class="middle">
+                    <div class="text">John Doe</div>
+                  </div> -->
+               <a href="https://adalovelace2003.github.io/Pokhara_Meals/" target="_blank">
+                  <div id="project-card3" class="project-cards">
+                     <img src="https://i.ibb.co/zXjv3K9/pokhara-meals.png" alt="" />
+                     <div class="overlay">
+                        <div class="text">
+                           <h1 class="tooltip2">
+                              Food Website
+                              <span class="tooltiptext"> Click to Preview</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </a>
+               <a href="https://adalovelace2003.github.io/Responsive_Dashboard_UI/" target="_blank">
+                  <div id="project-card01" class="project-cards">
+                     <img src="https://i.ibb.co/gdcfZdM/dashboard.png" alt="" />
+                     <div class="overlay">
+                        <div class="text">
+                           <h1 class="tooltip2">
+                              Dashboard UI
+                              <span class="tooltiptext"> Click to Preview</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </a>
+               <a href="https://adalovelace2003.github.io/Responsive_Navbar_HTML_CSS_only/" target="_blank">
+                  <div id="project-card2" class="project-cards">
+                     <img src="https://i.ibb.co/phRjZfm/responsive-navbar.png" alt="" />
+                     <div class="overlay">
+                        <div class="text">
+                           <h1 class="tooltip2">
+                              Responsive Navbar
+                              <span class="tooltiptext"> Click to Preview</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" target="_blank">
+                  <div id="project-card4" class="project-cards">
+                     <img src="https://i.ibb.co/Ry3k3tf/portfolio.png" alt="" />
+                     <div class="overlay">
+                        <div class="text">
+                           <h1 class="tooltip2">
+                              Portfolio 
+                              <span class="tooltiptext"> Click to Preview</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </a>
+               <a href="gym-site.html" target="_blank">
+                  <div id="project-card5" class="project-cards">
+                     <img src="https://i.ibb.co/R97Hs9V/gym-site.png" alt="" />
+                     <div class="overlay" >
+                        <div class="text">
+                           <h1 class="tooltip2">
+                              Gym Website
+                              <span class="tooltiptext"> Click to Preview</span>
+                           </h1>
+                        </div>
+                     </div>
+                  </div>
+               </a>
+               <a href="#" target="_blank">
+                  <div id="project-card6" class="project-cards">
+                     <img src="https://i.ibb.co/R97Hs9V/gym-site.png" alt="" />
+                     <!-- using inline css to overwrite the internal css to show the loading screen so that editing in future will be easier -->
+                     <div class="overlay" style="opacity: 1">
+                        <div class="ring">
+                           Loading..
+                           <span></span>
+                        </div>
+                     </div>
+                  </div>
+               </a>
+            </section>
+         </div>
+      </section>
+      <section id="contact">
+         <section id="contact-me">
+            <h1>Say Hi to Me.</h1>
+            <form action="https://formspree.io/f/xoqzqqpl" method="POST">
+               <div class="row1">
+                  <div class="form-group">
+                     <input type="text" name="name" placeholder="Enter your Name..."
+                        required />
+                  </div>
+                  <div class="form-group">
+                     <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your Email..."
+                        required
+                        />
+                  </div>
+               </div>
+               <div class="message-area">
+                  <textarea
+                     class="form-control"
+                     name="message"
+                     rows="3"
+                     placeholder="Enter your Message..."
+                     required></textarea>
+               </div>
+               <button type="submit" class="btn">
+               <a href="#" id="style-2" data-replace="Submit"><span>Submit </span></a>
+            </form>
+         </section>
+         <div class="footer-container">
+            <footer>
+               <div class="container">
+                  <div class="contacts">
+                     <p>
+                        <strong>
+                        Email :
+                        </strong>
+                        adalovelace2003@gmail.com
+                     </p>
+                     <p>
+                        <strong>Phone :</strong>
+                        +9779143143143
+                     </p>
+                     <span>
+                     </span>
+                     <p id="built">Built by Ada Lovelace. </p>
+                  </div>
+                  <div class="arrow-up">
+                     <a href="#home">
+                     <img
+                        src="https://cdn-icons-png.flaticon.com/128/892/892692.png"
+                        alt="">
+                     </a>
+                  </div>
+                  <div class="icon-n-copyright">
+                     <div class="icons">
+                        <a href="https://www.facebook.com/adalovelace2003/"
+                           target="_blank"> <img
+                           src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+                           alt="fb-logo"> </a>
+                        <a href="https://github.com/adalovelace2003" target="_blank">
+                        <img
+                           src="https://cdn-icons-png.flaticon.com/128/270/270798.png"
+                           alt="github-logo"> </a>
+                        <a href=" https://www.instagram.com/adalovelace2003/"
+                           target="_blank" >
+                        <img
+                           src="https://cdn-icons-png.flaticon.com/128/1177/1177585.png"
+                           alt="insta-logo"> </a>
+                        <!-- <a href=""> <img
+                           src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                           alt="github-logo"> </a> -->
+                     </div>
+                     <p>Copyright (c) Ada Lovelace.</p>
+                  </div>
+               </div>
+            </footer>
+         </div>
+      </section>
+   </body>
+</html>
