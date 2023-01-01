@@ -12,7 +12,7 @@
         --blue: #007bff;
         --pink: #e93f5bb0;
       }
-      html{
+      html {
         scroll-behavior: smooth;
       }
       * {
@@ -41,7 +41,9 @@
         background: white;
         padding-right: 20px;
       }
-      #home,#resume,#portfolio {
+      #home,
+      #resume,
+      #portfolio {
         padding-top: 10vh;
       }
       header > h1 > p {
@@ -272,6 +274,7 @@
         margin: 20px;
         max-width: 33%;
         height: 32vh;
+        border-radius: 30px;
       }
 
       .project-cards > img {
@@ -279,6 +282,290 @@
         height: inherit;
         display: block;
         margin: auto;
+        border-radius: 30px;
+      }
+
+      /* hovering and text overlay effect */
+      #project-card1 {
+        position: relative;
+      }
+      #project-card1 > img {
+        opacity: 1;
+        display: block;
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+      }
+      .middle {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 135%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      /* adding hover overlay effects to the cards */
+      .overlay{
+        border-radius: 30px;
+      }
+      
+      #project-card1:hover {
+        opacity: 0.5;
+      }
+      #project-card1:hover .image {
+        opacity: 0.3;
+      }
+
+      #project-card1:hover .middle {
+        opacity: 1;
+      }
+      .text {
+        background-color: #04aa6d;
+        color: white;
+        font-size: 16px;
+        padding: 16px 32px;
+      }
+
+      /* #project-card01 */
+
+      #project-card01 {
+        position: relative;
+        width: 50%;
+      }
+
+      #project-card01 img {
+        display: block;
+        width: 270%;
+      }
+
+      #project-card01 .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: #008cba;
+        overflow: hidden;
+        width: 270%;
+        height: 0;
+        transition: 0.5s ease;
+      }
+      #project-card01 .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      #project-card01:hover .overlay {
+        bottom: 0;
+        height: 100%;
+      }
+
+      /* hovering and text overlay effect */
+      #project-card2 {
+        position: relative;
+      }
+      #project-card2 > img {
+        display: block;
+        width: 270%;
+      }
+      #project-card2 .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 270%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: #008cba;
+        border-radius: 30px;
+      }
+      #project-card2:hover .overlay {
+        opacity: 0.9;
+      }
+
+      #project-card2 .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      /* project cards 3  */
+
+      #project-card3 {
+        position: relative;
+      }
+
+      #project-card3 img {
+        display: block;
+        width: 270%;
+      }
+
+      #project-card3 .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #008cba;
+        overflow: hidden;
+        width: 270%;
+        height: 100%;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: 0.5s ease;
+        transition: 0.5s ease;
+      }
+
+      #project-card3:hover .overlay {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+
+      #project-card3 .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      /* project-card4 */
+
+      #project-card4 {
+        position: relative;
+      }
+
+      #project-card4 img {
+        display: block;
+        width: 270%;
+      }
+
+      #project-card4 .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #008cba;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: 0.5s ease;
+      }
+
+      #project-card4:hover .overlay {
+        width: 270%;
+      }
+
+      #project-card4 .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+      }
+
+      /* project card 5  */
+      #project-card5 {
+        position: relative;
+        width: 50%;
+      }
+
+      #project-card5 img {
+        display: block;
+        width: 270%;
+      }
+
+      #project-card5 .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #008cba;
+        overflow: hidden;
+        width: 270%;
+        height: 0;
+        transition: 0.5s ease;
+      }
+
+      #project-card5:hover .overlay {
+        height: 100%;
+      }
+
+      #project-card5 .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      /* #project-card6 */
+      #project-card6 {
+        position: relative;
+        width: 270%;
+      }
+
+      #project-card6 img {
+        display: block;
+        width: 270%;
+      }
+
+      #project-card6 .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 270%;
+        right: 0;
+        background-color: #008cba;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: 0.5s ease;
+      }
+
+      #project-card6:hover .overlay {
+        width: 270%;
+        left: 0;
+      }
+
+      #project-card6 .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
       }
     </style>
   </head>
@@ -364,23 +651,50 @@
       </div>
       <div class="container">
         <section class="projects">
-          <div class="project-cards">
+          <!-- <div id="project-card1" class="project-cards">
             <img src="python-img.png" alt="" />
+            <div class="middle">
+              <div class="text">John Doe</div>
+            </div> -->
+
+          <div id="project-card3" class="project-cards">
+            <img src="python-img.png" alt="" />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
           </div>
-          <div class="project-cards">
+
+          <div id="project-card01" class="project-cards">
             <img src="python-img.png" alt="" />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
           </div>
-          <div class="project-cards">
+
+          <div id="project-card2" class="project-cards">
             <img src="python-img.png" alt="" />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
           </div>
-          <div class="project-cards">
+          <div id="project-card4" class="project-cards">
             <img src="python-img.png" alt="" />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
           </div>
-          <div class="project-cards">
+          <div id="project-card5" class="project-cards">
             <img src="python-img.png" alt="" />
+
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
           </div>
-          <div class="project-cards">
+          <div id="project-card6" class="project-cards">
             <img src="python-img.png" alt="" />
+            <div class="overlay">
+              <div class="text">Hello World</div>
+            </div>
           </div>
         </section>
       </div>
