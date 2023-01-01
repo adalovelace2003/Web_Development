@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7872/7872535.png" /> -->
+    <link rel="stylesheet" href="/DAY49/logo.png" />
+    <title>Portfolio || Ada Lovelace</title>
+    <style>
+      :root {
+        --blue: #007bff;
+        --pink: #e93f5bb0;
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body > section {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      header {
+        /* position: sticky; */
+        position: fixed;
+        /* border: 1px solid red; */
+        height: 10vh;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 50px;
+        z-index: 100;
+        width: 100%;
+        background: white;
+        padding-right: 20px;
+      }
+      #home,#resume,#portfolio {
+        padding-top: 10vh;
+      }
+      header > h1 > p {
+        cursor: pointer;
+      }
+      h1 {
+        display: flex;
+        align-items: center;
+      }
+
+      h1 a > img {
+        margin-top: 5px;
+        height: 30px;
+      }
+
+      h1 p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-left: 10px;
+        color: rgb(225, 20, 191);
+      }
+      nav {
+        width: 45%;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      nav li a {
+        text-decoration: none;
+        position: relative;
+        color: grey;
+      }
+      nav li a:hover {
+        color: rgb(100, 100, 100);
+      }
+      /* adding hover under line transition effect */
+      header nav ul li a::before {
+        content: "";
+        width: 0px;
+        height: 2px;
+        background: var(--pink);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: 0.35s;
+      }
+
+      header nav ul li a:hover::before {
+        width: 45%;
+        transform: translateX(100%);
+      }
+
+      #home {
+        height: 100vh;
+        background-color: var(--pink);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        color: white;
+        transition: 1s ease;
+      }
+
+      #home > h1 {
+        font-size: 5rem;
+      }
+      #home > p {
+        font-size: 2rem;
+      }
+
+      #home > div {
+        border: 2px solid white;
+        padding: 12px 30px;
+        border-radius: 26px;
+      }
+
+      #home > div > a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      #resume {
+        height: 100vh;
+        /* background-color: #04c6de; */
+        /* background-color: #87ebf892; */
+        background-color: whitesmoke;
+        transition: 1s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .resume-upper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35vh;
+        flex-direction: column;
+        line-height: 1.5rem;
+        color: black;
+        width: 100%;
+      }
+      .resume-upper > h1:nth-child(1) {
+        font-size: 3rem;
+        font-weight: 400;
+      }
+      .resume-upper > h1:nth-child(3) {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: 20px;
+      }
+      .resume-upper > p {
+        width: 66%;
+        padding-top: 15px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .resume-lower {
+        /* border: 1px solid red; */
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        height: 60vh;
+      }
+
+      .cards {
+        border: 2px solid grey;
+        border-radius: 10px;
+        width: 25%;
+        padding: 10px;
+        min-height: 52vh;
+        max-height: 52vh;
+        overflow: auto;
+        box-shadow: 5px 5px 5px grey;
+        cursor: pointer;
+        transition: 0.15s ease;
+      }
+      .cards:hover {
+        border: 2px solid rgb(72, 71, 71);
+        box-shadow: 5px 5px 5px rgb(72, 71, 71);
+        transform: scale(1.01);
+      }
+      .cards img {
+        height: 20vh;
+        margin: auto;
+        display: block;
+      }
+
+      .cards > h3 {
+        display: block;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      /* portfolio */
+      #portfolio {
+        height: 100vh;
+        background-color: lavender;
+      }
+
+      #div1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      #div1 > h1 {
+        border-bottom: 3px dotted gray;
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 220px;
+        background-color: powderblue;
+        color: #9b8e8e;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 35px;
+        right: 22px;
+      }
+      .tooltip .tooltiptext::after {
+        opacity: 0.5;
+        content: " ";
+        position: absolute;
+        bottom: 100%; /* At the top of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+
+      .container {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        /* grid-gap: 5rem; */
+      }
+      .project-cards {
+        /* border: 2px solid blue; */
+        margin: 20px;
+        max-width: 33%;
+        height: 32vh;
+      }
+
+      .project-cards > img {
+        /* border: 2px solid blue; */
+        height: inherit;
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="#">
+          <!-- <img
+            src="https://cdn-icons-png.flaticon.com/512/7872/7872535.png"
+            alt="logo"
+            id="logo"
+          /> -->
+          <img src="/DAY49/logo.png" alt="logo" />
+        </a>
+        <p>Ada</p>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#home"> Home </a></li>
+          <li><a href="#resume"> Resume </a></li>
+          <li><a href="#portfolio"> Portfolio </a></li>
+          <li><a href="#contact"> Contact </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- home -->
+
+    <section id="home">
+      <h1>Ada Lovelace</h1>
+      <p>I love playing with keyboard and this is my website.</p>
+      <div><a href="#resume"> Learn More ⇩ </a></div>
+    </section>
+
+    <!-- resume -->
+
+    <section id="resume">
+      <section class="resume-upper">
+        <h1>Hi, I am Ada Lovelace.</h1>
+        <p>
+          I am a computer enthusiast and I love playing with computers and codes
+          and I have been coding since few months. Welcome to my world.
+        </p>
+        <h1>And I love.</h1>
+      </section>
+      <section class="resume-lower">
+        <div class="cards">
+          <img src="/DAY49/logo.png" alt="" />
+          <h3>Heading</h3>
+          <div class="cards-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            fugiat quam tempore obcaecati sit mollitia iusto rerum cupiditate
+            explicabo pariatur?
+          </div>
+        </div>
+        <div class="cards">
+          <img src="/DAY49/logo.png" alt="" />
+          <h3>Heading</h3>
+          <div class="cards-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            fugiat quam tempore obcaecati sit mollitia iusto rerum cupiditate
+            explicabo pariatur?
+          </div>
+        </div>
+        <div class="cards">
+          <img src="/DAY49/logo.png" alt="" />
+          <h3>Heading</h3>
+          <div class="cards-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            fugiat quam tempore obcaecati sit mollitia iusto rerum cupiditate
+            explicabo pariatur?
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- portfolio -->
+    <section id="portfolio">
+      <div id="div1">
+        <h1 class="tooltip">
+          What have I done ? <span class="tooltiptext"> My Projects </span>
+        </h1>
+      </div>
+      <div class="container">
+        <section class="projects">
+          <div class="project-cards">
+            <img src="python-img.png" alt="" />
+          </div>
+          <div class="project-cards">
+            <img src="python-img.png" alt="" />
+          </div>
+          <div class="project-cards">
+            <img src="python-img.png" alt="" />
+          </div>
+          <div class="project-cards">
+            <img src="python-img.png" alt="" />
+          </div>
+          <div class="project-cards">
+            <img src="python-img.png" alt="" />
+          </div>
+          <div class="project-cards">
+            <img src="python-img.png" alt="" />
+          </div>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>
