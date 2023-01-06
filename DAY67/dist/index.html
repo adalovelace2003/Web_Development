@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-grey">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="text-gray-600">
+    <div class="grid lg:grid-cols-5"> <!-- content wrapper  -->
+
+      <div class="lg:col-span-1">
+        <nav>
+          <div>
+            <h1 class="font-bold uppercase p-4 border-b border-gray-100">
+              <a href="#" class="text-green-500 sm:text-gray-500  sm:text-3xl">Food Ninja</a>
+            </h1>
+          </div>
+          <ul class="text-gray-700 font-bold ml-3">
+            <li>
+              <a href="#">
+                <span>Home</span>
+                <svg class="w-6 float" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>About</span>
+                <svg class="w-6 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Contact</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="px-16 py-6 bg-gray-100 lg:col-span-4">
+        <div class="text-red-500 font-bold flex md:justify-end sm:justify-center">
+          <a href="#" class="btnStyle border-red-300 md:border-2    md:hover:text-white md:hover:bg-red-300"> Log In </a>
+          <a href="#" class="ml-4 btnStyle border-red-300 md:border-2     md:hover:text-white md:hover:bg-red-300"> Sign Up</a>
+        </div>
+
+          
+
+        <header>
+          <h2 class="text-gray-700 text-6xl font-semibold">Receipes</h2>
+          <h3 class="text-4xl font-semibold">For Ninjas</h3>
+        </header>
+
+        <div>
+          <h4 class="font-bold mt-12 pb-2 border-b border-gray-400 ">
+            Latest Receipes
+          </h4>
+
+          <div class="mt-8 grid lg:grid-cols-3 gap-20">
+
+            <!-- Cards go here -->
+            <div class="card ">
+              <img
+                src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600l"
+                alt="food"
+                class="h-32 w-full object-cover"
+              />
+              <div class="m-4">
+                <span class="font-fold "> 5 Bean Chilli Sauce </span>
+                <span class="block text-gray-500 text-sm"> Receipe by Mario</span>
+              </div>
+              <div class="badge">
+                <svg class="w-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>
+                  25 mins
+                </span>
+              </div>
+            </div>
+
+            <div class="card ">
+              <img
+                src="https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="food"
+                class="h-32 w-full object-cover"
+              />
+              <div class="m-4">
+                <span class="font-fold "> Whole Chicken Grilled </span>
+                <span class="block text-gray-500 text-sm"> Receipe by Mario</span>
+              </div>
+              <div class="badge">
+                <svg class="w-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>
+                  25 mins
+                </span>
+              </div>
+            </div>
+
+            <div class="card ">
+              <img
+                src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="food"
+                class="h-32 w-full object-cover"
+              />
+              <div class="m-4">
+                <span class="font-fold "> Chicken Katti Roll</span>
+                <span class="block text-gray-500 text-sm"> Receipe by Mario</span>
+              </div>
+              <div class="badge">
+                <svg class="w-5 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>
+                  25 mins
+                </span>
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <h4 class="font-bold mt-12 border-b border-gray-200">Most Popular</h4>
+
+          <div class="mt-8">
+            <!-- Cards go Here  -->
+          </div>
+
+          <div class="flex justify-center ">
+            <div class="bg-red-200 text-red-600 btnStyle">Load more</div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    
+
+  </body>
+</html>
+
+
