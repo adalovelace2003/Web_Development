@@ -1,0 +1,40 @@
+<!DOCTYPE html>                            
+<html lang="en">
+<head>                              
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-blue-900 m-10">
+
+    <main class="text-5xl block mr-auto text-center mt-10 font-bold  text-white border-white border-4 p-16 rounded-md">
+        <h1 class=" text-red-500 text-8xl">
+            Counter
+        </h1>
+        <h2 id="count" class="mt-10 text-8xl">
+            1337
+        </h2>
+
+        <button onclick="decrement()" class="p-10 text-8xl bg-red-600 mt-10" >-</button>
+        <button onclick="increment()" class="p-10 text-8xl bg-red-600 ml-10" >+</button>
+    </main>
+
+
+
+</body>
+<script>
+    let count = 0;
+
+    function increment() {
+      count += 1;
+      document.getElementById("count").innerHTML = count;
+    }
+
+    function decrement() {
+      count -= 1;
+      document.getElementById("count").innerHTML = count;
+    }
+</script>
+</html>
