@@ -1,0 +1,22 @@
+<!DOCTYPE html>                            
+<html lang="en" >
+<head>                              
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="m-16 ">
+<h1 class="text-6xl font-bold text-center"> People Entered:</h1>
+<h2 id="count-el" class="mt-6 text-8xl font-medium text-center"> 0 </h2>
+<p id="save-el" class="mt-10 text-3xl font-bold bg-gray-100 rounded-xl p-3"> Previous entries : &nbsp; </p>
+<button id="increment-btn" onclick="incrementCount()" class="uppercase text-xl font-bold mt-10 p-5 rounded-xl inline-block m-auto mr-5  float-left bg-red-500 hover:scale-110 active:bg-blue-600 active:text-white"> Increment </button>
+<button id="decrement-btn" onclick="decrementCount()" class="uppercase text-xl font-bold mt-10 p-5 rounded-xl inline-block m-auto bg-red-500 hover:scale-110 active:bg-blue-600 active:text-white"> Decrement </button>
+<button id="decrement-btn" onclick="reset()" class="uppercase text-xl font-bold mt-10 p-5 rounded-xl inline-block ml-5 m-auto bg-red-500 hover:scale-110 active:bg-blue-600 active:text-white"> Reset </button>
+<!-- <button id="decrement-btn" onclick="save()" class="uppercase text-xl font-bold mt-10 p-5 rounded-xl w-full ml-5 m-auto bg-green-600 hover:scale-110 active:bg-blue-600 active:text-white"> Save </button> -->
+<button id="decrement-btn"  onclick="save()" class="uppercase text-xl font-bold mt-10 p-5 rounded-xl w-full ml-5 m-auto bg-green-600 hover:scale-110 active:bg-blue-600 active:text-white"> Save </button>
+<button id="decrement-btn"  onclick="clearSave()" class="uppercase text-xl font-bold mt-10 p-5 rounded-xl w-full ml-5 m-auto bg-gray-300 hover:scale-110 active:bg-blue-600 active:text-white"> Clear </button>
+</body>
+<script src="/dist/index.js"></script>
+</html>
