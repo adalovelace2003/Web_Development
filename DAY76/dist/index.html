@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-300">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </div>
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class=" block ml-10 text-left text-3xl text-gray-700 font-bold"> Ada Calculator</h1>
+    <div class="container h-80 w-52 ml-10 mt-10  border-gray-500 rounded-lg border-4 ">
+        <div class="bg-gray-100 h-1/6 m-2 rounded-lg">
+            <div  class="p-1 m-1 text-right">
+                <div  onclick="clear_1()" class="float-left text-xs border-2 border-gray-300 rounded-base hover:bg-gray-300 active:bg-gray-400  hover:text-gray-700 cursor-pointer">Clear</div>
+                <p id="result">0 </p>
+            </div>
+        </div>
+        <div class=" h-60  p-2 grid grid-cols-4 gap-1  ">
+            <span onclick="aa(1)" id="id1" class="nums"> 1 </span>
+            <span onclick="aa(2)" id="id2" class="nums"> 2 </span>
+            <span onclick="aa(3)" id="id3" class="nums"> 3 </span>
+            <span onclick="aa('-')"  id="id_sub" class="nums"> - </span>
+            <span onclick="aa(4)" id="id4" class="nums"> 4 </span>
+            <span onclick="aa(5)" id="id5" class="nums"> 5 </span>
+            <span onclick="aa(6)" id="id6" class="nums"> 6 </span>
+            <span onclick="aa('+')"  id="id_add" class="plus"> + </span>
+            <span onclick="aa(7)" id="id7" class="nums"> 7 </span>
+            <span onclick="aa(8)" id="id8" class="nums"> 8 </span>
+            <span onclick="aa(9)" id="id9" class="nums"> 9 </span>
+            <span onclick="aa('*')"  id="id_mul" class="nums"> * </span>
+            <span onclick="aa(0)" id="id0" class="nums grid-column-4-2"> 0 </span>
+            <span onclick="aa('/')"  id="id_div" class="nums text-9xl"> / </span>
+            <span onclick="math()" id="id_eql" class="nums text-9xl"> = </span>
+        </div>
+    </div>
+
+</body>
+<script src="/dist/index.js"></script>
+</html>

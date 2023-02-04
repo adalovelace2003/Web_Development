@@ -1,0 +1,13 @@
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+.nums{
+    @apply  text-base font-extrabold text-gray-500 bg-gray-100 text-center px-3 py-2 h-10 m-1 rounded-lg shadow-sm shadow-black cursor-pointer hover:opacity-80 hover:bg-gray-200 active:bg-gray-400 active:text-gray-700
+}
+
+.plus{
+    grid-row: 2/4;
+    grid-column: 4/4;
+    @apply  text-base font-extrabold text-gray-500 bg-gray-100 text-center px-3 py-8 m-1 rounded-lg shadow-sm shadow-black cursor-pointer hover:opacity-80 hover:bg-gray-200 active:bg-gray-400 active:text-gray-700
+}
