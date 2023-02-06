@@ -1,0 +1,41 @@
+<!DOCTYPE html>                            
+<html lang="en" class="bg-gray-200" >
+<head>                              
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="pt-20 pl-20 pb-10 border-8 rounded-3xl border-black m-10 ">
+
+<h1 class="text-5xl text-left text-purple-700 m-10 font-serif font-bold">Ada Simple Calculator</h1>
+
+<div class="ml-5">
+    <input type="text" value="1" id="num1" class="w-40 border-b-4 border-red-600 p-3 ml-10 active:text-blue-500 rounded-xl focus:outline-dashed focus:border-none focus:bg-gray-100 focus:outline-red-600"> 
+    <input type="text" value="2" id="num2" class="w-40 border-b-4 border-red-600 p-3 ml-10 active:text-blue-500 rounded-xl focus:outline-dashed focus:border-none focus:bg-gray-100 focus:outline-red-600"> 
+</div>
+
+<div class="buttons mt-10">
+    <button onclick ="add()" class="m-2 rounded-xl border-2 border-black hover:bg-blue-500 hover:text-white active:bg-blue-300"> Add </button>
+    <button onclick ="sub()" class="m-2 rounded-xl border-2 border-black hover:bg-blue-500 hover:text-white active:bg-blue-300"> Sub </button>
+    <button onclick ="div()" class="m-2 rounded-xl border-2 border-black hover:bg-blue-500 hover:text-white active:bg-blue-300"> Div </button>
+    <button onclick ="mul()" class="m-2 rounded-xl border-2 border-black hover:bg-blue-500 hover:text-white active:bg-blue-300"> Mul </button>
+</div>
+
+<section id="result" class="inline-block border-2 border-black mt-10 hover:opacity-50 active:text-blue-500">
+    Result : 
+    </p>
+</section>
+
+
+</body>
+<script src="/dist/index.js"></script>
+<style>
+    button,section{
+        padding: 10px;
+        padding-right: 30px;
+    }
+      
+</style>
+</html>
