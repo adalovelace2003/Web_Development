@@ -4,25 +4,44 @@ const inputBtn = document.querySelector("#input-btn");
 const ulEl = document.querySelector("#ul-el");
 
 inputBtn.addEventListener("click", function () {
-  function1();
-  function2();
-  function3();
+  removeP();
+  setTimeout(() => {
+    console.log("Validating...");
+    if (inputEl.value) {
+      if (!myLeads.includes(inputEl.value)) {
+        myLeads.push(inputEl.value);
+        console.log("Add Successful");
+        validationMessage("success");
+      } else {
+        console.log("Duplicate Item");
+        validationMessage("error");
+      }
+    }
+    inputEl.value = "";
+    renderLeads();
+}, 300);
 });
 
-function function1() {
-  console.log("save button clicked ");
-}
-function function2() {
-  myLeads.push(inputEl.value);
-}
-function function3() {
+function renderLeads() {
+  let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
-    console.log(myLeads[i]);
-    ulEl.textContent += myLeads[i] + "_____________";
+    listItems += `<li class="list-disc">${myLeads[i]}</li>`;
   }
+  ulEl.innerHTML = listItems;
 }
 
+function validationMessage(status) {
+  const errorEl = document.createElement("p");
+  errorEl.className = "text-xl font-bold";
+  errorEl.innerHTML = status === "success"
+    ? '<p class="text-green-600">Add Successful</p>'
+    : '<p class="text-red-600">Error Occurred</p>';
+  inputBtn.after(errorEl);
+}
 
-
-
-
+function removeP() {
+  const allParagraphs = document.querySelectorAll("p");
+  allParagraphs.forEach(function (p) {
+    p.remove();
+  });
+}
