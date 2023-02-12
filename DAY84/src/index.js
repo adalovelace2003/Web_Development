@@ -13,39 +13,20 @@ if (leadsFromLocalStorage) {
   render(myLeads);
 }
 
-const tabs = [{ url: "http://google.com/" }];
-
 tabBtn.addEventListener("click", function () {
-  // console.log(window.location.href);
-  //OR
+  removeP();
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    console.log(tabs);
+    checkDuplicateAndPush(tabs[0].url);
+    render(myLeads);
   });
-  
-  console.log(tabs[0]);
-  myLeads.push(tabs[0].url);
-  localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  render(myLeads);
 });
 
 inputBtn.addEventListener("click", function () {
   if (inputEl.value != "") {
     removeP();
     setTimeout(() => {
-      myLeads.push(inputEl.value);
-      localStorage.setItem("myLeads", JSON.stringify(myLeads));
 
-      // if (inputEl.value) {
-      //   if (!myLeads.includes(inputEl.value)) {
-      //     myLeads.push(inputEl.value);
-      //     console.log("Add Successful");
-      //     validationMessage("success");
-      //   } else {
-      //     console.log("Duplicate Item");
-      //     validationMessage("error");
-      //   }
-      // }
-
+      checkDuplicateAndPush(inputEl.value);
       inputEl.value = "";
       render(myLeads);
     }, 300);
@@ -54,19 +35,31 @@ inputBtn.addEventListener("click", function () {
   }
 });
 
+function checkDuplicateAndPush(value) {
+  console.log(inputEl.value);
+  if (!myLeads.includes(value)) {
+    myLeads.push(value);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    console.log("Add Successful");
+    validationMessage("success");
+    console.log(myLeads);
+  } else {
+    console.log("Duplicate Item");
+    validationMessage("error");
+    console.log(myLeads);
+  }
+}
+
 deleteBtn.addEventListener("dblclick", function () {
   console.log("double clicked ");
   localStorage.clear();
   myLeads = [];
-  // ulEl.innerHTML = "";
-  // leadsFromLocalStorage = ""
-  // OR use above two lines or this single line below
   render(myLeads);
 });
 
 function render(leads) {
   let style =
-    "cursor-pointer w-min underline text-purple-700 font-normal text-lg hover:scale-125";
+    "cursor-pointer w-min underline text-purple-700 font-normal text-xs hover:text-red-500";
   let listItems = "";
   for (let i = 0; i < leads.length; i++) {
     listItems += `
@@ -81,12 +74,11 @@ function render(leads) {
 
 function validationMessage(status) {
   const errorEl = document.createElement("p");
-  errorEl.className = "font-";
   errorEl.innerHTML =
     status === "success"
-      ? '<p class="text-green-600">Add Successful</p>'
-      : '<p class="text-red-600">Error Occurred</p>';
-  inputBtn.after(errorEl);
+      ? '<p class="text-sm text-green-600">Add Successful</p>'
+      : '<p class="text-sm text-red-600">Duplicate</p>';
+  deleteBtn.after(errorEl);
 }
 
 function removeP() {
