@@ -29,6 +29,9 @@ c = "a"
 // if(age == '18' ) console.log(" You just become an adult")
 // 
 
-const fav = prompt("What's your facourite number");
+const fav = prompt("What's your favourite number");
 
 console.log(fav)
+
+
+
