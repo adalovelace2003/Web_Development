@@ -6,7 +6,7 @@ function sum(a, b) {
 
 function checkGender(initial) {
   return initial == "M" ? 1 : 0;
-}
+} 
 
 function hello(Name, ID) {
   console.log(`Hi, ${Name}. Your Employee ID is ${ID}`);
