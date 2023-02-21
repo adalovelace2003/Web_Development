@@ -4,8 +4,8 @@ const messageEl = document.querySelector(".message");
 const guessEL = document.querySelector(".guess");  
 const scoreEL = document.querySelector(".score");
 const numberEl = document.querySelector(".number");
-// let number = Math.trunc(Math.random() * 20 + 1);
-let number = 10
+let number = Math.trunc(Math.random() * 20 + 1);
+// let number = 10
 const resetEl = document.querySelector("#reset");
 const highscoreEl = document.querySelector(".highscore");
 
