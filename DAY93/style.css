@@ -1,0 +1,180 @@
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set global styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #121212;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.main-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.between {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.number {
+  font-size: 5rem;
+  margin-top: 1rem;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 10rem;
+  text-align: center;
+  background-color: #282828;
+  box-shadow: 0 0 10px #666;
+}
+
+/* Main styles */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left {
+  flex-basis: 60%;
+  max-width: 600px;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guess {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  background-color: #282828;
+  color: #fff;
+  box-shadow: 0 0 10px #666;
+}
+
+.check {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #00adb5;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.check:hover {
+  background-color: #fff;
+  color: #00adb5;
+}
+
+.right {
+  flex-basis: 40%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.label-score,
+.label-highscore {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.score,
+.highscore {
+  font-weight: normal;
+  color: #00adb5;
+}
+
+main{
+  margin-top: 30px;
+}
+/* 
+/* Remove increment and decrement arrows for number input */
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+} */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Safari */
+  margin: 0;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .left {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .right {
+    flex-basis: 100%;
+    max-width: none;
+  }
+}
+
+#reset {
+  font-size: 19px;
+  background: green;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#reset:hover {
+  opacity: 80%;
+}
+
+#reset:active{
+  background-color: powderblue;
+  color: black;
+}
