@@ -1,7 +1,7 @@
 "use strict";
 let score = 20;
 const messageEl = document.querySelector(".message");
-const guessEL = document.querySelector(".guess");
+const guessEL = document.querySelector(".guess");  
 const scoreEL = document.querySelector(".score");
 const numberEl = document.querySelector(".number");
 // let number = Math.trunc(Math.random() * 20 + 1);
