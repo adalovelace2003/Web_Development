@@ -1,0 +1,21 @@
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+    /* border: 1px solid black; */
+    /* @apply  m-2 px-2  bg-gray-100 rounded-xl hover:bg-gray-300 */
+    /* default style */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, rgb(207, 207, 207) 6%, rgb(252, 252, 252) 69%); 
+    padding: 3px;
+    border: 1px solid #000;
+    color: black;
+    text-decoration: none;
+}
+
+.modal-container{
+    margin: 0px;
+}
