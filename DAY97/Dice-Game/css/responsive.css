@@ -1,0 +1,40 @@
+@media (max-width: 900px) {
+    html{
+        font-size: 7.5px;
+    }
+    pre{
+        font-size: 8px;
+    }
+    .modal-close-btn-cross{
+        right: 15%;
+    }
+}
+@media   (max-width: 650px) {
+    html{
+        font-size: 6px;
+    }
+    .modal-close-btn-cross{
+        right: 10%;
+    }
+}
+
+@media   (max-width: 475px) {
+    html{
+        font-size: 5px;
+    }
+}
+
+@media   (max-width: 400px) {
+    html{
+        font-size: 4px;
+    }
+}
+@media   (max-width: 350px) {
+    html{
+        font-size: 3px;
+    }
+    .question-mark{
+        border: 1px solid white;
+        padding: 3px 7px;
+    }
+}

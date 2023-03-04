@@ -1,0 +1,95 @@
+/* Style for the modal window */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+    opacity: 0.85;
+  }
+
+  .modal2{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+    opacity: 0.85;
+  }
+
+  
+  
+  /* Style for the modal window content */
+  .modal-content {
+    background: linear-gradient(to bottom right, purple , hotpink ); /* Purple-pink gradient background */
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 10%;
+  }
+  
+  /* Style for the modal window title */
+  .modal-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the modal window text */
+  .modal-text {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the modal window close button */
+  #modal-close-btn {
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  #modal-close-btn2 {
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #modal-close-btn:hover,
+  #modal-close-btn2:hover{
+    color: white;
+    background: #000;
+  }
+  #modal-close-btn:active,
+  #modal-close-btn2:active{
+    color: white;
+    background: red;
+  }
+
+  pre{
+    color: white;
+    font-size: 15px;
+  }
+
+  
+  

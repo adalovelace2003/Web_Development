@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="dice"
+        style="display:grid; grid-template: 20px 20px 20px /20px 20px 20px ; border: 2px solid red ;width: fit-content;text-align: center; font-size: 1.3rem;">
+        <span> &bull; </span>
+        <span> &bull; </span>
+        <span> &bull; </span>
+        <span> &bull; </span>
+        <span> &bull; </span>
+        <span> &bull; </span>
+        <span> &bull; </span>
+        <span> &bull; </span>
+        <span> &bull; </span>
+    </div>
+    <button onclick="shuffleDots()">Shuffle Dots</button>
+
+
+
+    <style>
+        .dot-container-shuffling span {
+            animation: shuffle 1s ease-in-out;
+            transform-origin: 50% 50%;
+            transition: opacity 0.3s ease-in-out;
+            filter: blur(0.5rem);
+            opacity: 0;
+        }
+
+        .dot-container-shuffling span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .dot-container-shuffling span:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .dot-container-shuffling span:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .dot-container-shuffling span:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .dot-container-shuffling span:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .dot-container-shuffling span:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .dot-container-shuffling span:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        .dot-container-shuffling span:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+
+        .dot-container-shuffling span:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes shuffle {
+            0% {
+                transform: rotate(0deg) translate(0, 0);
+                filter: blur(0.5rem);
+                opacity: 0;
+            }
+
+            30% {
+                filter: blur(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: rotate(180deg) translate(40px, 0);
+                filter: blur(0.5rem);
+                opacity: 0;
+            }
+
+            80% {
+                filter: blur(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: rotate(360deg) translate(0, 0);
+                filter: blur(0.5rem);
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script>
+        function shuffleDots() {
+            const dotContainer = document.querySelector("#dice");
+            const dots = dotContainer.querySelectorAll("span");
+            const dotArray = Array.from(dots);
+
+            // Shuffle the dot array using Fisher-Yates shuffle algorithm
+            for (let i = dotArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [dotArray[i], dotArray[j]] = [dotArraydotArray[j], dotArray[i]];
+            }
+            // Update the dot container with the shuffled dots
+            dotContainer.innerHTML = "";
+            dotArray.forEach((dot) => dotContainer.appendChild(dot));
+
+            // Add shuffling animation to the dot container
+            dotContainer.classList.add("dot-container-shuffling");
+
+            // Remove shuffling animation after 1 second
+            setTimeout(() => {
+                dotContainer.classList.remove("dot-container-shuffling");
+            }, 1000);
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+    <!-- <style>
+      .dot-container-shuffling span {
+        animation: shuffle 0.5s ease-in-out;
+        transform-origin: 50% 50%;
+      }
+    
+      @keyframes shuffle {
+        0% {
+          transform: rotate(0deg) translate(0, 0);
+        }
+        50% {
+          transform: rotate(180deg) translate(40px, 0);
+        }
+        100% {
+          transform: rotate(360deg) translate(0, 0);
+        }
+      }
+    </style> -->
+    <!--     
+    <script>
+      function shuffleDots() {
+        const dotContainer = document.querySelector('div');
+        const dots = dotContainer.querySelectorAll('span');
+        const dotArray = Array.from(dots);
+    
+        // Shuffle the dot array using Fisher-Yates shuffle algorithm
+        for (let i = dotArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [dotArray[i], dotArray[j]] = [dotArray[j], dotArray[i]];
+        }
+    
+        // Update the dot container with the shuffled dots
+        dotContainer.innerHTML = '';
+        dotArray.forEach((dot) => dotContainer.appendChild(dot));
+    
+        // Add shuffling animation to the dot container
+        dotContainer.classList.add('dot-container-shuffling');
+    
+        // Remove shuffling animation after 1 second
+        setTimeout(() => {
+          dotContainer.classList.remove('dot-container-shuffling');
+        }, 1000);
+      }
+    </script> -->
+
+
+
+
+
+
+    <!-- <button onclick="shuffleDots()">Shuffle Dots</button>
+
+<style>
+  .dot-container-shuffling span {
+    animation: shuffle 0.5s ease-in-out;
+  }
+
+  @keyframes shuffle {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(10px, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+</style>
+
+<script>
+  function shuffleDots() {
+    const dotContainer = document.getElementById('dice');
+    const dots = dotContainer.querySelectorAll('span');
+    const dotArray = Array.from(dots);
+
+    // Shuffle the dot array using Fisher-Yates shuffle algorithm
+    for (let i = dotArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [dotArray[i], dotArray[j]] = [dotArray[j], dotArray[i]];
+    }
+
+    // Update the dot container with the shuffled dots
+    dotContainer.innerHTML = '';
+    dotArray.forEach((dot) => dotContainer.appendChild(dot));
+
+    // Add shuffling animation to the dot container
+    dotContainer.classList.add('dot-container-shuffling');
+
+    // Remove shuffling animation after 1 second
+    setTimeout(() => {
+      dotContainer.classList.remove('dot-container-shuffling');
+    }, 1000);
+  }
+</script> -->
